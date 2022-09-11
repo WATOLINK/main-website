@@ -1,31 +1,26 @@
 import styled from 'styled-components'
-import useWindowSize from './WindowDimensions'
 
-const StyledCopyright = styled.div`
+const StyledCopyright = styled.p`
     width: 340px;
     height: 30px;
     box-sizing: border-box;
-    display:table-cell;
+    display: table-cell;
     text-align: center;
     vertical-align: middle;
     position: absolute;
     left: 50%;
+    bottom: 0%;
     transform: translate(-50%);
-    color: #000000;
-    font-size: 20px;
-    font-weight: bold;
-    font-family: Poppins;
+    font: ${({theme}) => theme.fonts.footer};
 `
 
 const StyledMenuItems = styled.div`
     height: 30px;
     box-sizing: border-box;
-    display:table-cell;
+    display: table-cell;
     vertical-align: middle;
-    color: #000000;
-    font-size: 22px;
-    font-weight: bold;
-    font-family: Poppins;
+    margin: 15px;
+    font: ${({theme}) => theme.fonts.footer};
 `
 
 const StyledMenu = styled.div`
