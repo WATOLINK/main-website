@@ -18,6 +18,7 @@ const fonts = {
 }
 
 const colors = {
+    white: '#FFFFFF',
     black: '#000000',
     blue: '#0088FF',
     lightpurple: '#BDA6D0',
