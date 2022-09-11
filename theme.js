@@ -1,7 +1,7 @@
 // TODO: setup fonts, colours, sizes
 
 const fonts = {
-    nav: `normal 600 20px 'Poppins', sans-serif`,
+    nav: `normal 500 20px 'Poppins', sans-serif`,
     footer: `normal 600 20px 'Poppins', sans-serif`,
 
     small20bolder: `normal 700 20px 'Poppins', sans-serif`,
