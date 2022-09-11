@@ -1,11 +1,8 @@
 // TODO: setup fonts, colours, sizes
 
 const fonts = {
-    small20: `normal 500 20px 'Poppins'`,
-    header: small20,
-
-    small20bold: `normal 600 20px 'Poppins'`,
-    footer: small20bold,
+    nav: `normal 500 20px 'Poppins'`,
+    footer: `normal 600 20px 'Poppins'`,
 
     small20bolder: `normal 700 20px 'Poppins'`,
 
@@ -15,14 +12,9 @@ const fonts = {
     medium28: `normal 500 28px 'Poppins'`,
     medium28bold: `normal 700 28px 'Poppins'`,
 
-    medium30: `normal 500 30px 'Poppins'`,
-    subheading: medium30,
-
-    large45bold: `normal 700 45px 'Poppins'`,
-    heading: large45bold,
-
-    large72: `normal 600 72px 'Poppins'`,
-    largeheading: large72,
+    subheading: `normal 500 30px 'Poppins'`,
+    heading: `normal 700 45px 'Poppins'`,
+    largeheading: `normal 600 72px 'Poppins'`,
 }
 
 const colors = {
@@ -37,7 +29,7 @@ const colors = {
     grey: '#949494',
 }
 
-export default theme = {
+export const theme = {
     colors,
     fonts,
 }
