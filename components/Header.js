@@ -2,31 +2,9 @@ import styled from 'styled-components'
 import Link from 'next/link'
 import Image from 'next/image'
 import SmallLogo from '../public/logos/SmallLogo.svg'
+import NAVLINKS from '../constants/navlinks'
 
 // TODO: confirm route names with leads
-const headers = [
-    {
-        name: 'About Us',
-        href: '/',
-    },
-    {
-        name: 'Projects',
-        href: '/projects',
-    },
-    {
-        name: 'Team',
-        href: '/members',
-    },
-    {
-        name: 'Contact',
-        href: '/contact',
-    },
-    {
-        name: 'Join our Team',
-        href: '/',
-        accent: true,
-    },
-]
 
 const Container = styled.div`
     margin: 20px;
@@ -93,8 +71,8 @@ export default function Header() {
                 </Link>
             </ImageContainer>
             <HeaderContainer>
-                {headers.map((header) => (
-                    <NavLink key={header.name} {...header} />
+                {NAVLINKS.map((navlink) => (
+                    <NavLink key={navlink.name} {...navlink} />
                 ))}
             </HeaderContainer>
         </Container>
