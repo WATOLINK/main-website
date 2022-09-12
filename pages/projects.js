@@ -25,6 +25,8 @@ const StyledTitleText = styled.div`
     color: ${({theme}) => theme.colors.blue};
     font: ${({theme}) => theme.fonts.heading};
     text-align: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
 `
 
 const TitleText = ()=>{
@@ -43,6 +45,8 @@ const StyledSecondaryText = styled.div`
     color: ${({theme}) => theme.colors.blue};
     font: ${({theme}) => theme.fonts.medium24bold};
     text-align: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
 `
 
 const BodyText = ()=>{
@@ -53,7 +57,6 @@ const BodyText = ()=>{
 
     return(
         <div>
-            <br></br>
             <StyledBodyText>{bodyText1}</StyledBodyText>
             <StyledBodyText>{bodyText2}</StyledBodyText>
             <br></br>
