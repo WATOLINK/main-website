@@ -1,5 +1,3 @@
-// TODO: setup fonts, colours, sizes
-
 const fonts = {
     nav: `normal 500 20px 'Poppins', sans-serif`,
     footer: `normal 600 20px 'Poppins', sans-serif`,

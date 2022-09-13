@@ -15,13 +15,13 @@ const ErrorText = styled.p`
 `
 
 const ReturnLink = styled.a`
-    color: ${({ theme }) => theme.colors.black};
+    color: ${({ theme }) => theme.colors.accent};
     font: ${({ theme }) => theme.fonts.medium28bold};
-    transition: color 0.2s, background-color 0.2s;
+    text-decoration: none;
     cursor: pointer;
 
     &:hover {
-        color: ${({ theme }) => theme.colors.accent};
+        text-decoration: underline;
     }
 `
 
