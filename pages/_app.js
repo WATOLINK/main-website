@@ -1,12 +1,27 @@
-import { ThemeProvider } from 'styled-components'
+import styled, { ThemeProvider } from 'styled-components'
+import Footer from '../components/Footer'
 import Header from '../components/Header'
 import { theme } from '../theme'
+import '../styles.css'
+
+const App = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    margin: 0;
+`
 
 function MyApp({ Component, pageProps }) {
     return (
         <ThemeProvider theme={theme}>
-            <Header />
-            <Component {...pageProps} />
+            <App>
+                <div>
+                    <Header />
+                    <Component {...pageProps} />
+                </div>
+                <Footer />
+            </App>
         </ThemeProvider>
     )
 }
