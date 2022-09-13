@@ -19,7 +19,7 @@ function MyApp({ Component, pageProps }) {
                     <Header />
                     <Component {...pageProps} />
                 </div>
-                <Footer />
+                <Footer page={Component.name} />
             </App>
         </ThemeProvider>
     )
