@@ -11,12 +11,12 @@ const ImageContainer = styled.a`
     margin: 10px;
 `
 
-const IconContainer = styled.div`
+const IconsContainer = styled.div`
     margin-left: 10px;
     display: inline-block;
 `
 
-const StyledFooterMessage = styled.div`
+const StyledSocialMediaMessage = styled.div`
     font: ${({theme}) => theme.fonts.footer};
     font-weight: 1000;
     margin-left: 20px;
@@ -24,7 +24,7 @@ const StyledFooterMessage = styled.div`
     display: inline-block;
 `
 
-const FooterIconsContainer = styled.div`
+const SocialMediaContainer = styled.div`
     max-width: 300px;
     display: inline-block;
     position: absolute;
@@ -36,7 +36,7 @@ const FooterIconsContainer = styled.div`
 
 export function FontIcons() {
     return (
-        <IconContainer>
+        <IconsContainer>
             <ImageContainer title="Instagram">
                 <Link href="https://www.instagram.com/watolink_uw/">
                     <i class='fa fa-instagram fa-3x' style={{color:"#0088FF"}}></i>
@@ -52,13 +52,13 @@ export function FontIcons() {
                     <i class='fa fa-linkedin-square fa-3x' style={{color:"#0088FF"}}></i>
                 </Link>
             </ImageContainer>
-        </IconContainer>
+        </IconsContainer>
     )
 }
 
-export function FooterIcons() {
+export function SocialMediaBlock() {
     return (
-        <FooterIconsContainer>
+        <SocialMediaContainer>
             <ImageContainer title="About Us">
                 <Link href="/">
                     <Image
@@ -70,10 +70,10 @@ export function FooterIcons() {
                     />
                 </Link>
             </ImageContainer>
-            <StyledFooterMessage>
+            <StyledSocialMediaMessage>
                 Get In Touch!
-            </StyledFooterMessage>
+            </StyledSocialMediaMessage>
             <FontIcons />
-        </FooterIconsContainer>
+        </SocialMediaContainer>
     )
 }

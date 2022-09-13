@@ -1,33 +1,9 @@
 import styled from 'styled-components'
 import Link from 'next/link'
-import { FooterIcons } from '../components/Common'
-
-const FooterItems = [
-    {
-        name: 'About Us',
-        href: '/',
-    },
-    {
-        name: 'Projects',
-        href: '/projects',
-    },
-    {
-        name: 'Team',
-        href: '/members',
-    },
-    {
-        name: 'Contact',
-        href: '/contact',
-    },
-    {
-        name: 'Join our Team',
-        href: '/',
-    },
-]
+import { SocialMediaBlock } from '../components/Common'
+import NAVLINKS from '../constants/navlinks'
 
 const FooterContainer = styled.div`
-    width: auto;
-    height: auto;
     position: ${({bottomed}) => bottomed ? 'absolute' : 'relative'};
     bottom: ${({bottomed}) => bottomed ? 0 : 'none'};
 `
@@ -79,24 +55,16 @@ export function Copyright({ bottomed = false }) {
     )
 }
 
-export function DefaultFooter({ bottomed = false }) {
-    return (
-        <FooterContainer bottomed = {bottomed}>
-            <MenuContainer>
-                {FooterItems.map((header) => (
-                    <NavLink key={header.name} {...header} />
-                ))}
-            </MenuContainer>
-            <FooterIcons />
-            <Copyright />
-        </FooterContainer>
-    )
-}
-
 export function AboutFooter({ bottomed = false }) {
     return (
         <FooterContainer bottomed = {bottomed}>
-            <DefaultFooter />
+            <MenuContainer>
+                {NAVLINKS.map((header) => (
+                    <NavLink key={header.name} {...header} />
+                ))}
+            </MenuContainer>
+            <SocialMediaBlock />
+            <Copyright />
         </FooterContainer>
     )
 }
