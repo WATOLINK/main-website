@@ -2,7 +2,12 @@ const fonts = {
     nav: `normal 500 20px 'Poppins', sans-serif`,
     footer: `normal 600 20px 'Poppins', sans-serif`,
 
+    small20: `normal 500 20px 'Poppins', sans-serif`,
+    small20bold: `normal 600 20px 'Poppins', sans-serif`,
     small20bolder: `normal 700 20px 'Poppins', sans-serif`,
+
+    // small22: `normal 500 22px 'Poppins', sans-serif`,
+    // small22bold: `normal 600 22px 'Poppins', sans-serif`,
 
     medium24: `normal 500 24px 'Poppins', sans-serif`,
     medium24bold: `normal 700 24px 'Poppins', sans-serif`,

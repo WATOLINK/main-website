@@ -1,4 +1,5 @@
-import { theme } from '../theme'
+import { theme } from '../../theme'
+import DIRECTORS from './directors'
 
 const { lightpurple, lightblue, yellow, pink, green, greyblue, grey } =
     theme.colors
@@ -6,12 +7,13 @@ const { lightpurple, lightblue, yellow, pink, green, greyblue, grey } =
 const GROUPS = [
     {
         title: 'Managing Directors',
-        leads: Directors.filter((director) => director.lead),
-        members: Directors.filter((director) => !director.lead),
+        leads: DIRECTORS.filter((director) => director.lead),
+        members: DIRECTORS.filter((director) => !director.lead),
         color: lightpurple,
     },
     {
         title: 'Artificial Intelligence',
+        leads: [],
         members: [],
         color: lightblue,
     },

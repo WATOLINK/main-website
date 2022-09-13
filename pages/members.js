@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import Member from '../components/Member'
 import {
     GROUPS,
     DIRECTORS,
@@ -13,6 +14,11 @@ const PageContainer = styled.div`
 
 const GroupContainer = styled.div`
     margin: 40px 0px;
+`
+
+const Subtitle = styled.h1`
+    font: ${({ theme }) => theme.fonts.medium28};
+    text-align: center;
 `
 
 const MemberRow = styled.div`
@@ -32,7 +38,27 @@ export default function Members() {
     return (
         <PageContainer>
             {GROUPS.map((group) => (
-                <GroupContainer key={group.title}>{group.title}</GroupContainer>
+                <GroupContainer key={group.title}>
+                    <Subtitle>{group.title}</Subtitle>
+                    <MemberRow>
+                        {group.leads?.map((lead) => (
+                            <Member
+                                key={lead.name}
+                                color={group.color}
+                                {...lead}
+                            />
+                        ))}
+                    </MemberRow>
+                    <MemberRow>
+                        {group.members?.map((member) => (
+                            <Member
+                                key={member.name}
+                                color={group.color}
+                                {...member}
+                            />
+                        ))}
+                    </MemberRow>
+                </GroupContainer>
             ))}
         </PageContainer>
     )
