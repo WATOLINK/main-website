@@ -1,53 +1,102 @@
 import styled from 'styled-components'
+import Link from 'next/link'
+import { FooterIcons } from '../components/Common'
 
-const StyledCopyright = styled.p`
-    width: 340px;
-    height: 30px;
-    box-sizing: border-box;
-    display: table-cell;
+const FooterItems = [
+    {
+        name: 'About Us',
+        href: '/',
+    },
+    {
+        name: 'Projects',
+        href: '/projects',
+    },
+    {
+        name: 'Team',
+        href: '/members',
+    },
+    {
+        name: 'Contact',
+        href: '/contact',
+    },
+    {
+        name: 'Join our Team',
+        href: '/',
+    },
+]
+
+const FooterContainer = styled.div`
+    width: auto;
+    height: auto;
+    position: ${({bottomed}) => bottomed ? 'absolute' : 'relative'};
+    bottom: ${({bottomed}) => bottomed ? 0 : 'none'};
+`
+
+const MenuContainer = styled.div`
+    max-width: 500px;
+`
+
+const StyledCopyright = styled.div`
+    width: 100%;
+    height: auto;
     text-align: center;
-    vertical-align: middle;
-    position: absolute;
-    left: 50%;
-    bottom: 0%;
-    transform: translate(-50%);
+    margin 15px 0px;
     font: ${({theme}) => theme.fonts.footer};
 `
 
-const StyledMenuItems = styled.div`
-    height: 30px;
-    box-sizing: border-box;
-    display: table-cell;
-    vertical-align: middle;
-    margin: 15px;
-    font: ${({theme}) => theme.fonts.footer};
+const StyledLink = styled.div`
+    color: ${({ theme }) => theme.colors.black};
+    background: ${({ theme }) => theme.colors.white};
+    font: ${({ theme }) => theme.fonts.footer};
+    transition: color 0.2s, background-color 0.2s;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 200px;
+    cursor: pointer;
+    display: inline-block;
+
+    &:hover {
+        color: ${({ theme }) => theme.colors.accent };
+        background: ${({ theme }) => theme.colors.white};
+    }
 `
 
-const StyledMenu = styled.div`
-
-`
-
-export function Copyright() {
-    return <StyledCopyright> &copy; WATOLINK 2022 </StyledCopyright>
-}
-
-export function DefaultFooter() {
+const NavLink = ({ name, href }) => {
     return (
-        <div>
-            <StyledMenuItems> About Us </StyledMenuItems>
-            <StyledMenuItems> Projects </StyledMenuItems>
-            <StyledMenuItems> Team </StyledMenuItems>
-            <StyledMenuItems> Contact </StyledMenuItems>
-            <StyledMenuItems> Join Our Team! </StyledMenuItems>
-            <Copyright />
-        </div>
+        <Link href={href}>
+            <StyledLink> {name} </StyledLink>
+        </Link>
     )
 }
 
-export function Footer() {
+export function Copyright({ bottomed = false }) {
     return (
-        <div>
+        <FooterContainer bottomed = {bottomed}>
+            <StyledCopyright> &copy; WATOLINK 2022 </StyledCopyright>
+        </FooterContainer>
+    )
+}
+
+export function DefaultFooter({ bottomed = false }) {
+    return (
+        <FooterContainer bottomed = {bottomed}>
+            <MenuContainer>
+                {FooterItems.map((header) => (
+                    <NavLink key={header.name} {...header} />
+                ))}
+            </MenuContainer>
+            <FooterIcons />
+            <Copyright />
+        </FooterContainer>
+    )
+}
+
+export function AboutFooter({ bottomed = false }) {
+    return (
+        <FooterContainer bottomed = {bottomed}>
             <DefaultFooter />
-        </div>
+        </FooterContainer>
     )
 }
