@@ -10,8 +10,15 @@ const ProfileContainer = styled.div`
 `
 
 const IconContainer = styled.div`
+    width: 150px;
+    height: 150px;
     border-radius: 140px;
-    background-image: url('/members/DefaultProfileIcon.svg');
+    background-image: url('/logos/Brain.png');
+    background-position: center;
+    background-size: 95%;
+    background-repeat: no-repeat;
+    background-position-x: -22px;
+    background-position-y: -11px;
     background-color: ${({ color }) => color};
 `
 

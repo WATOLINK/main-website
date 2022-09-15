@@ -1,5 +1,4 @@
 import Chris from '../../public/members/Chris.png'
-import DefaultProfileIcon from '../../public/members/DefaultProfileIcon.svg'
 
 const DIRECTORS = [
     {
@@ -17,7 +16,6 @@ const DIRECTORS = [
     {
         name: 'Test',
         position: 'test',
-        // icon: DefaultProfileIcon,
     },
 ]
 
