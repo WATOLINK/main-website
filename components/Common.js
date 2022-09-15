@@ -3,7 +3,6 @@ import Link from 'next/link'
 import Image from 'next/image'
 import SmallLogo from '../public/logos/SmallLogo.svg'
 // replace with uploaded icons from figma
-import 'font-awesome/css/font-awesome.min.css'
 
 const ImageContainer = styled.a`
     display: 'flex';
