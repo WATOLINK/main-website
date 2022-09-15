@@ -7,6 +7,8 @@ const ProfileContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 200px;
+    height: auto;
 `
 
 const IconContainer = styled.div`
@@ -25,11 +27,13 @@ const IconContainer = styled.div`
 const Name = styled.p`
     margin: 0.3em;
     font: ${({ theme }) => theme.fonts.small20bold};
+    text-align: center;
 `
 
 const Position = styled.p`
     margin: 0;
     font: ${({ theme }) => theme.fonts.small20};
+    text-align: center;
 `
 
 export default function Member({ color, name, position, icon }) {

@@ -1,10 +1,6 @@
 import styled from 'styled-components'
 import Member from '../components/Member'
-import {
-    GROUPS,
-    DIRECTORS,
-    // AI, BSR, CONSOF, SIDE, MECHDESIGN, FACULTYADVISORS
-} from '../constants/members'
+import GROUPS from '../constants/members'
 
 const PageContainer = styled.div`
     display: flex;
@@ -13,7 +9,7 @@ const PageContainer = styled.div`
 `
 
 const GroupContainer = styled.div`
-    margin: 40px 0px;
+    margin: 30px 0px;
 `
 
 const Subtitle = styled.h1`
@@ -24,6 +20,10 @@ const Subtitle = styled.h1`
 const MemberRow = styled.div`
     display: flex;
     justify-content: center;
+`
+
+const Spacer = styled.br`
+    height: 100px;
 `
 
 // (just for me to see)
@@ -39,6 +39,7 @@ export default function Members() {
         <PageContainer>
             {GROUPS.map((group) => (
                 <GroupContainer key={group.title}>
+                    {group.title === 'Faculty Advisors' && <Spacer />}
                     <Subtitle>{group.title}</Subtitle>
                     <MemberRow>
                         {group.leads?.map((lead) => (

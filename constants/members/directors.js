@@ -1,4 +1,6 @@
-import Chris from '../../public/members/Chris.png'
+import Chris from '../../public/members/directors/Chris.svg'
+import Avery from '../../public/members/directors/Avery.svg'
+import Maryann from '../../public/members/directors/Maryann.svg'
 
 const DIRECTORS = [
     {
@@ -8,14 +10,16 @@ const DIRECTORS = [
         lead: true,
     },
     {
-        name: 'Fishtopher Salmron',
-        position: 'Co-Flounder',
-        icon: Chris,
-        lead: false,
+        name: 'Avery Chui',
+        position: 'Co-Founder',
+        icon: Avery,
+        lead: true,
     },
     {
-        name: 'Test',
-        position: 'test',
+        name: 'Maryann Kayrala',
+        position: 'Finance Lead',
+        icon: Maryann,
+        lead: true,
     },
 ]
 
