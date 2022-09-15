@@ -4,13 +4,9 @@ import Image from 'next/image'
 import SmallLogo from '../public/logos/SmallLogo.svg'
 import NAVLINKS from '../constants/navlinks'
 
-// TODO: confirm route names with leads
-
 const Container = styled.div`
-    margin: 20px;
     height: auto;
     display: flex;
-    flex-shrink: 0;
     justify-content: space-between;
     align-items: center;
 `
