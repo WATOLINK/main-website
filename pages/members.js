@@ -2,6 +2,12 @@ import styled from 'styled-components'
 import Member from '../components/Member'
 import GROUPS from '../constants/members'
 
+const Title = styled.h1`
+    font: ${({ theme }) => theme.fonts.heading};
+    color: ${({ theme }) => theme.colors.blue};
+    margin: 0;
+`
+
 const PageContainer = styled.div`
     display: flex;
     flex-direction: column;
@@ -20,6 +26,7 @@ const Subtitle = styled.h1`
 const MemberRow = styled.div`
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 `
 
 const Spacer = styled.br`
@@ -37,6 +44,7 @@ const Spacer = styled.br`
 export default function Members() {
     return (
         <PageContainer>
+            <Title>MEET THE TEAM:</Title>
             {GROUPS.map((group) => (
                 <GroupContainer key={group.title}>
                     {group.title === 'Faculty Advisors' && <Spacer />}

@@ -7,8 +7,9 @@ const ProfileContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 200px;
+    width: 225px;
     height: auto;
+    margin-bottom: 15px;
 `
 
 const IconContainer = styled.div`

@@ -16,7 +16,7 @@ const fonts = {
     medium28bold: `normal 700 28px 'Poppins', sans-serif`,
 
     subheading: `normal 600 30px 'Poppins', sans-serif`,
-    heading: `normal 700 45px 'Poppins', sans-serif`,
+    heading: `normal 600 45px 'Poppins', sans-serif`,
     largeheading: `normal 700 72px 'Poppins', sans-serif`,
 }
 
