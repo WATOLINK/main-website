@@ -2,6 +2,7 @@ import styled, { ThemeProvider } from 'styled-components'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
 import { theme } from '../theme'
+import '../styles.css'
 
 const App = styled.div`
     display: flex;
