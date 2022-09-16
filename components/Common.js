@@ -7,14 +7,20 @@ import 'font-awesome/css/font-awesome.min.css'
 
 const ImageContainer = styled.a`
     display: 'flex';
-    cursor: pointer;
 `
 
 const IconsContainer = styled.div`
     display: flex;
     padding-left: 10;
+    
     & > a {
         padding: 10px;
+        cursor: pointer;
+        transition: opacity 0.3s;
+
+        &:hover {
+            opacity: 0.5;
+        }
     }
 `
 
@@ -64,9 +70,7 @@ export default function SocialMediaBlock() {
     return (
         <SocialMediaContainer>
             <ImageContainer title="About Us">
-                <Link href="/">
-                    <Image alt="WATOLINK logo" src={SmallLogo} layout="fixed" />
-                </Link>
+                <Image alt="WATOLINK logo" src={SmallLogo} layout="fixed" />
             </ImageContainer>
             <StyledSocialMediaMessage>Get In Touch!</StyledSocialMediaMessage>
             <FontIcons />

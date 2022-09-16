@@ -30,7 +30,7 @@ const StyledLink = styled.div`
     color: ${({ theme }) => theme.colors.black};
     background: ${({ theme }) => theme.colors.white};
     font: ${({ theme }) => theme.fonts.footer};
-    transition: color 0.2s, background-color 0.2s;
+    transition: color 0.3s, background-color 0.2s;
     padding: 20px;
     cursor: pointer;
     display: inline-block;
