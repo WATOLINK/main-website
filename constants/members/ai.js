@@ -34,6 +34,9 @@ const AI = [
         name: 'Josh Saha',
         icon: Josh,
     },
+    {
+        name: 'Krish Shah',
+    },
 ]
 
 export default AI

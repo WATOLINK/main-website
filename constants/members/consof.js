@@ -29,7 +29,7 @@ const CONSOF = [
     },
     {
         name: 'Tom Shu',
-        icon: Tom
+        icon: Tom,
     },
     {
         name: 'Bryan Lee',
@@ -38,6 +38,9 @@ const CONSOF = [
     {
         name: 'Ayush Shah',
         icon: Ayush,
+    },
+    {
+        name: 'Tyler Bell',
     },
 ]
 

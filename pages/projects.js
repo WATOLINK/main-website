@@ -39,7 +39,7 @@ export default function Projects() {
                 />
             </Head>
             <Container>
-                <Title>PROJECTS:</Title>
+                <Title>PROJECTS</Title>
                 <BodyText>
                     We are currently developing our project submission towards
                     the NeuroTechX 2022 competition.

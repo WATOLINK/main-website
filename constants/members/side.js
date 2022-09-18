@@ -5,12 +5,12 @@ import Sudhish from '../../public/members/side/Sudhish.svg'
 import Achira from '../../public/members/side/Achira.svg'
 
 const SIDE = [
-    {
-        name: 'Kevin Kim',
-        position: 'Co-Lead',
-        lead: true,
-        icon: Kevin,
-    },
+    // {
+    //     name: 'Kevin Kim',
+    //     position: 'Co-Lead',
+    //     lead: true,
+    //     icon: Kevin,
+    // },
     {
         name: 'Adalia Spadafora',
         position: 'Co-Lead',
@@ -20,9 +20,6 @@ const SIDE = [
     {
         name: 'Graham Haedrich',
         icon: Graham,
-    },
-    {
-        name: 'Noura Almawi',
     },
     {
         name: 'Sudhish Meenakshisundaram',
