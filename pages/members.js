@@ -44,7 +44,7 @@ const Spacer = styled.br`
 export default function Members() {
     return (
         <PageContainer>
-            <Title>MEET THE TEAM:</Title>
+            <Title>MEET THE TEAM</Title>
             {GROUPS.map((group) => (
                 <GroupContainer key={group.title}>
                     {group.title === 'Faculty Advisors' && <Spacer />}

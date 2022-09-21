@@ -30,7 +30,7 @@ const BSR = [
         icon: Tegan,
     },
     {
-        name: 'Vivien Yu',
+        name: 'Andy Wu',
     },
 ]
 
