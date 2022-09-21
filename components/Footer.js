@@ -6,6 +6,7 @@ import NAVLINKS from '../constants/navlinks'
 const Container = styled.div`
     display: flex;
     flex-direction: column;
+    padding-top: 50px;
 `
 
 const TopContainer = styled.div`
