@@ -1,25 +1,3 @@
-const NAVLINKS = [
-    {
-        name: 'About Us',
-        href: '/',
-    },
-    {
-        name: 'Projects',
-        href: '/projects',
-    },
-    {
-        name: 'Team',
-        href: '/members',
-    },
-    {
-        name: 'Contact',
-        href: '/contact',
-    },
-    {
-        name: 'Join our Team',
-        href: '/',
-        accent: true,
-    },
-]
+import NAVLINKS from './navlinks'
 
 export default NAVLINKS
