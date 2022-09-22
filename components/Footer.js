@@ -6,6 +6,7 @@ import NAVLINKS from '../constants/navlinks'
 const Container = styled.div`
     display: flex;
     flex-direction: column;
+    padding-top: 50px;
 `
 
 const TopContainer = styled.div`
@@ -30,7 +31,7 @@ const StyledLink = styled.div`
     color: ${({ theme }) => theme.colors.black};
     background: ${({ theme }) => theme.colors.white};
     font: ${({ theme }) => theme.fonts.footer};
-    transition: color 0.2s, background-color 0.2s;
+    transition: color 0.3s, background-color 0.2s;
     padding: 20px;
     cursor: pointer;
     display: inline-block;
