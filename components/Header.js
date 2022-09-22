@@ -24,6 +24,7 @@ const HeaderContainer = styled.div`
 `
 
 const StyledLink = styled.a`
+    text-decoration: none;
     color: ${({ accent, theme }) =>
         accent ? theme.colors.accent : theme.colors.black};
     background: ${({ theme }) => theme.colors.white};
@@ -46,8 +47,13 @@ const StyledLink = styled.a`
 
 const NavLink = ({ name, href, accent = false }) => {
     return (
-        <Link href={href}>
-            <StyledLink accent={accent}>{name}</StyledLink>
+        <Link href={href} passHref={true}>
+            <StyledLink
+                accent={accent}
+                target={href.includes('https') ? '_blank' : '_self'}
+            >
+                {name}
+            </StyledLink>
         </Link>
     )
 }
