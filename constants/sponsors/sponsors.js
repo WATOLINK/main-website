@@ -9,26 +9,32 @@ const SPONSORS = [
     {
         name: 'NEUROTECHX',
         src: NTX,
+        url: 'https://neurotechx.com/',
     },
     {
         name: 'Waterloo Engineering Society',
         src: UWEngSoc,
+        url: 'https://www.engsoc.uwaterloo.ca/',
     },
     {
         name: 'Waterloo Engineering',
         src: UWEng,
+        url: 'https://uwaterloo.ca/engineering/',
     },
     {
         name: 'Waterloo Engineering Endowment Fund',
         src: UWWEEF,
+        url: 'https://uwaterloo.ca/engineering-endowment-foundation/',
     },
     {
         name: 'Neural Rehab Engineering Lab',
         src: NRE,
+        url: 'https://uwaterloo.ca/neural-rehabilitation-engineering-lab/',
     },
     {
         name: 'Waterloo Engineering Bionics Lab',
         src: WEBL,
+        url: 'https://uwaterloo.ca/engineering-bionics-lab/',
     },
 ]
 
