@@ -98,6 +98,7 @@ const Divider = styled.div`
 
 const CaptionContainer = styled.div`
     text-align: center;
+    padding: 0 50px;
 `
 
 const SponsorContainer = styled.div`

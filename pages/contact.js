@@ -67,7 +67,11 @@ export default function Contact() {
                 </Title>
                 <BodyContainer>
                     {CONTACTS.map((contact) => (
-                        <Organizer type={contact.type} info={contact.info} />
+                        <Organizer
+                            key={contact.type}
+                            type={contact.type}
+                            info={contact.info}
+                        />
                     ))}
                 </BodyContainer>
                 <FontIcons />
