@@ -55,7 +55,13 @@ export function FontIcons() {
     return (
         <IconsContainer>
             {SOCIALMEDIA.map((socialmedia) => (
-                <Organizer image={socialmedia.image} filename={socialmedia.filename} link={socialmedia.link} custom={socialmedia.custom}/>
+                <Organizer
+                    key={socialmedia.link}
+                    image={socialmedia.image}
+                    filename={socialmedia.filename}
+                    link={socialmedia.link}
+                    custom={socialmedia.custom}
+                />
             ))}
         </IconsContainer>
     )
