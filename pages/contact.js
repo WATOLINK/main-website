@@ -1,15 +1,20 @@
 import styled from 'styled-components'
 import CONTACTS from '../constants/contactinfo/contactinfo'
 import { FontIcons } from '../components/Common'
+import BigGoose from '../public/logos/BigGoose.svg'
+import Image from 'next/image'
 
 const CenteredContainer = styled.div`
-    display: flex;
-    justify-content: center;
+    transform: translate(0%, 50%);
+    padding: 0px 100px;
 `
 
 const Container = styled.div`
     display: flex;
     flex-direction: column;
+    background-image: url('logos/BigGoose.svg');
+    background-position: top right;
+    background-repeat: no-repeat;
 `
 
 const BodyContainer = styled.div`
@@ -25,9 +30,8 @@ const LineContainer = styled.div`
 const Title = styled.div`
     color: ${({ theme }) => theme.colors.blue};
     font: ${({ theme }) => theme.fonts.heading};
-    padding-bottom: 50px;
+    padding-bottom: 35px;
     display: flex;
-    justify-content: center;
 `
 
 const BoldBodyText = styled.div`

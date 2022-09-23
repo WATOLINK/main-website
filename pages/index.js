@@ -52,6 +52,12 @@ const Text = styled.div`
     line-height: 2rem;
 `
 
+const BodyText = styled.div`
+    font: ${({ theme }) => theme.fonts.small20};
+    line-height: 2rem;
+    padding: 0px 70px;
+`
+
 const InfoDiv = styled.div`
     width: 400px;
     display: flex;
@@ -146,13 +152,13 @@ export default function About() {
                 </ContentContainer>
                 <ContentContainer>
                     <CaptionContainer>
-                        <Text>
+                        <BodyText>
                             WATOLINK offers students an opportunity to develop
                             applications involving action-classification via EEG
                             signal analysis and inference. Our team is currently
                             laying the groundwork for a project that we will
                             submit to the NeuroTechX Competition in 2022.
-                        </Text>
+                        </BodyText>
                     </CaptionContainer>
                 </ContentContainer>
                 <ContentContainer>
