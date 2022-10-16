@@ -10,7 +10,7 @@ const DIRECTORS = [
         lead: true,
     },
     {
-        name: 'Avery Chui',
+        name: 'Avery Chiu',
         position: 'Co-Founder',
         icon: Avery,
         lead: true,
