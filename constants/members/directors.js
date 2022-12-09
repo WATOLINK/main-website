@@ -1,5 +1,6 @@
 import Chris from '../../public/members/directors/Chris.svg'
 import Avery from '../../public/members/directors/Avery.svg'
+import Surya from '../../public/members/directors/Surya.svg'
 import Maryann from '../../public/members/directors/Maryann.svg'
 
 const DIRECTORS = [
@@ -13,6 +14,12 @@ const DIRECTORS = [
         name: 'Avery Chiu',
         position: 'Co-Founder',
         icon: Avery,
+        lead: true,
+    },
+    {
+        name: 'Surya Pandiaraju',
+        position: 'Team Lead / Advisor',
+        icon: Surya,
         lead: true,
     },
     {
