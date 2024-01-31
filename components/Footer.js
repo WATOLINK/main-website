@@ -7,6 +7,7 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
     padding-top: 50px;
+    background-color: ${({ theme }) => theme.colors.lightblue};
 `
 
 const TopContainer = styled.div`
@@ -18,6 +19,9 @@ const TopContainer = styled.div`
 const LinkContainer = styled.div`
     display: flex;
     flex-direction: column;
+    border-radius: 25px;
+    padding: 20px 60px;
+    background-color: ${({ theme }) => theme.colors.white};
 `
 
 const StyledCopyright = styled.div`
@@ -25,12 +29,14 @@ const StyledCopyright = styled.div`
     justify-content: center;
     margin: 15px 0px;
     font: ${({ theme }) => theme.fonts.footer};
+    color: ${({ theme }) => theme.colors.white};
 `
 
 const StyledLink = styled.div`
-    color: ${({ theme }) => theme.colors.black};
+    color: ${({ theme }) => theme.colors.blue};
     background: ${({ theme }) => theme.colors.white};
     font: ${({ theme }) => theme.fonts.footer};
+    text-align: center;
     transition: color 0.3s, background-color 0.2s;
     padding: 20px;
     cursor: pointer;
@@ -47,6 +53,7 @@ export default function Footer({ page, bottomed = false }) {
         <Container>
             {page !== 'Contact' && (
                 <TopContainer bottomed={bottomed}>
+                    <SocialMediaBlock />
                     <LinkContainer>
                         {NAVLINKS.map((header) => (
                             <Link key={header.name} href={header.href}>
@@ -54,7 +61,6 @@ export default function Footer({ page, bottomed = false }) {
                             </Link>
                         ))}
                     </LinkContainer>
-                    <SocialMediaBlock />
                 </TopContainer>
             )}
             <StyledCopyright> &copy; WATOLINK 2022 </StyledCopyright>

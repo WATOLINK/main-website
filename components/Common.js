@@ -6,11 +6,13 @@ import SOCIALMEDIA from '../constants/contactinfo/socialmedia'
 
 const ImageContainer = styled.a`
     display: 'flex';
-    padding: ${({ custom }) => custom ? custom : '0px'};
+    padding: ${({ custom }) => (custom ? custom : '0px')};
 `
 
 const IconsContainer = styled.div`
     display: flex;
+    justify-content: center;
+    align-items: center;
 
     & > a {
         cursor: pointer;
@@ -24,28 +26,37 @@ const IconsContainer = styled.div`
 
 const StyledSocialMediaMessage = styled.a`
     font: ${({ theme }) => theme.fonts.footer};
+    color: ${({ theme }) => theme.colors.blue};
     font-weight: 900;
-    padding-left: 20px;
+    ${'' /* padding-left: 20px; */}
 `
 
 const SocialMediaContainer = styled.div`
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    border-radius: 25px;
+    padding: 60px 20px;
 
     & > div {
         padding: 5px 0px 0px 10px;
     }
+    background-color: ${({ theme }) => theme.colors.white};
+`
+
+const CaptionContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 0 50px;
 `
 
 const Organizer = ({ image, filename, link, custom }) => {
     return (
         <ImageContainer title={image} custom={custom}>
             <Link href={link}>
-                <Image
-                    alt={image}
-                    src={filename}
-                    layout="fixed"
-                />
+                <Image alt={image} src={filename} layout="fixed" />
             </Link>
         </ImageContainer>
     )
@@ -73,8 +84,12 @@ export default function SocialMediaBlock() {
             <ImageContainer title="About Us">
                 <Image alt="WATOLINK logo" src={SmallLogo} layout="fixed" />
             </ImageContainer>
-            <StyledSocialMediaMessage>Get In Touch!</StyledSocialMediaMessage>
-            <FontIcons />
+            <CaptionContainer>
+                <StyledSocialMediaMessage>
+                    Get In Touch!
+                </StyledSocialMediaMessage>
+                <FontIcons />
+            </CaptionContainer>
         </SocialMediaContainer>
     )
 }
