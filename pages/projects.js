@@ -7,10 +7,16 @@ const Container = styled.div`
 `
 
 const Title = styled.div`
-    color: ${({ theme }) => theme.colors.blue};
+    color: ${({ theme }) => theme.colors.white};
     font: ${({ theme }) => theme.fonts.heading};
+    background-color: ${({ theme }) => theme.colors.blue};
+    opacity: 0.5;
     text-align: center;
-    padding-bottom: 50px;
+    padding: 30px;
+    margin-top: 50px;
+    outline: ${({theme}) => theme.colors.blue};
+    box-shadow: 0px 1px 6px black;
+    margin-bottom: 50px;
 `
 
 const BodyText = styled.div`
@@ -39,7 +45,7 @@ export default function Projects() {
                 />
             </Head>
             <Container>
-                <Title>PROJECTS</Title>
+                <Title>CURRENT PROJECTS</Title>
                 <BodyText>
                     We are currently developing our project submission towards
                     the NeuroTechX 2022 competition.
