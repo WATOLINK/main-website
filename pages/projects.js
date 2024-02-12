@@ -33,6 +33,16 @@ const BottomText = styled.div`
     margin-bottom: 2%;
 `
 
+const StyledCardDiv = styled.div`
+    background-color: ${({ color }) => color};
+    width: 100px;
+    border-radius: 5px;
+    outline: ${({theme}) => theme.colors.blue} solid 2px;
+    opacity: 0.5;
+    box-shadow: 0px 3px 2px black;
+    padding: 30px;
+`
+
 export default function Projects() {
     return (
         <>
@@ -46,13 +56,9 @@ export default function Projects() {
             </Head>
             <Container>
                 <Title>CURRENT PROJECTS</Title>
-                <BodyText>
-                    We are currently developing our project submission towards
-                    the NeuroTechX 2022 competition.
-                </BodyText>
-                <BodyText>
-                    Showcase will be available after competition date.
-                </BodyText>
+                <StyledCardDiv color={'white'}>
+                    <img src={"/project_icons/bci_gaming_img.svg"} />
+                </StyledCardDiv>
                 <br></br>
                 <BottomText>Stay Tuned!</BottomText>
             </Container>
