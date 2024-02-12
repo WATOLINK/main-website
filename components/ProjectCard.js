@@ -1,13 +1,16 @@
 import styled from 'styled-components'
+import Image from 'next/image'
 
 const StyledCardDiv = styled.div`
     background-color: ${({ color }) => color};
     width: 100px;
     border-radius: 5px;
-    outline: ${({theme}) => theme.colors.blue} solid;
-    opacity: 0.5;
 `
 
-export default function ProjectCard({ color }) {
-    return <StyledCardDiv color={color}></StyledCardDiv>
+export default function ProjectCard({ color, icon, name }) {
+    return (
+        <StyledCardDiv color={color}>
+            <Image alt={name} src={icon} width={400} height={400} />
+        </StyledCardDiv>
+    )
 }

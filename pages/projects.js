@@ -1,5 +1,7 @@
 import Head from 'next/head'
 import styled from 'styled-components'
+import ProjectCard from '../components/ProjectCard'
+import PROJECTS from '../constants/projects'
 
 const Container = styled.div`
     display: flex;
@@ -34,12 +36,10 @@ const BottomText = styled.div`
 `
 
 const StyledCardDiv = styled.div`
-    background-color: ${({ color }) => color};
     width: 100px;
     border-radius: 5px;
-    outline: ${({theme}) => theme.colors.blue} solid 2px;
-    opacity: 0.5;
-    box-shadow: 0px 3px 2px black;
+    outline: rgb(0, 136, 254, 0.2) solid 4px;
+    box-shadow: 0px 1px 5px black;
     padding: 30px;
 `
 
