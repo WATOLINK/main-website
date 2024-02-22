@@ -2,6 +2,7 @@ import Head from 'next/head'
 import styled from 'styled-components'
 import ProjectCard from '../components/ProjectCard'
 import PROJECTS from '../constants/projects'
+import Image from 'next/image'
 
 const Container = styled.div`
     display: flex;
@@ -16,7 +17,7 @@ const Title = styled.div`
     text-align: center;
     padding: 30px;
     margin-top: 50px;
-    outline: ${({theme}) => theme.colors.blue};
+    outline: ${({ theme }) => theme.colors.blue};
     box-shadow: 0px 1px 6px black;
     margin-bottom: 50px;
 `
@@ -36,11 +37,50 @@ const BottomText = styled.div`
 `
 
 const StyledCardDiv = styled.div`
-    width: 100px;
-    border-radius: 5px;
+    width: fit;
+    border-radius: 30px;
     outline: rgb(0, 136, 254, 0.2) solid 4px;
     box-shadow: 0px 1px 5px black;
-    padding: 30px;
+    padding: 30px 70px;
+`
+
+const ProjectCardContainer = styled.div`
+    display: flex;
+    gap: 10%;
+    margin: 100px auto;
+`
+
+const ProjectCardTitle = styled.div`
+    color: ${({ theme }) => theme.colors.blue};
+    font: ${({ theme }) => theme.fonts.heading};
+    text-align: center;
+    margin: 20px 0;
+    font-size: 1.4em;
+`
+
+const ProjectCardDescription = styled.div`
+    font: ${({ theme }) => theme.fonts.small20bold};
+`
+
+const ProjectVideoTitle = styled.div`
+    font: ${({ theme }) => theme.fonts.subheading};
+    text-align: center;
+    font-size: 1.5rem;
+`
+
+const ProjectVideoTitleContainer = styled.div`
+    margin: 50px 0;
+`
+
+const ProjectVideoContainer = styled.iframe`
+    margin: 0 auto;
+`
+
+const ProjectVideoCaption = styled.div`
+    text-align: center;
+    margin: 50px 0;
+    font: ${({ theme }) => theme.fonts.small20};
+    padding: 0 150px;
 `
 
 export default function Projects() {
@@ -56,10 +96,51 @@ export default function Projects() {
             </Head>
             <Container>
                 <Title>CURRENT PROJECTS</Title>
-                <StyledCardDiv color={'white'}>
-                    <img src={"/project_icons/bci_gaming_img.svg"} />
-                </StyledCardDiv>
+                {/* <Image
+                    src={'/blue_blobs/first_blob.svg'}
+                    width={50}
+                    height={50}
+                /> */}
+                <ProjectCardContainer>
+                    {PROJECTS.map((project) => (
+                        <StyledCardDiv color={'white'}>
+                            <Image
+                                src={project.icon}
+                                width={500}
+                                height={500}
+                            />
+                            <ProjectCardTitle>{project.name}</ProjectCardTitle>
+                            <ProjectCardDescription>
+                                {project.description}
+                            </ProjectCardDescription>
+                        </StyledCardDiv>
+                    ))}
+                </ProjectCardContainer>
                 <br></br>
+                <Title>Past Projects</Title>
+                <ProjectVideoTitleContainer>
+                    <ProjectVideoTitle>
+                        NeuroTechX 2022 Neurotechnology Competition
+                    </ProjectVideoTitle>
+                    <ProjectVideoTitle>
+                        Winning Submission Video:
+                    </ProjectVideoTitle>
+                </ProjectVideoTitleContainer>
+                <ProjectVideoContainer
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/dEvILV4_CIg?start=2159"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                ></ProjectVideoContainer>
+                <ProjectVideoCaption>
+                    <strong>Grand Winner (1st Place):</strong> Watolink from the
+                    University of Waterloo. Their prize was $2,000 USD and 1
+                    hour live consultation with Branch Out's Director of
+                    Research about product commercialization
+                </ProjectVideoCaption>
                 <BottomText>Stay Tuned!</BottomText>
             </Container>
         </>
