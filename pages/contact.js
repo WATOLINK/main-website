@@ -1,77 +1,51 @@
-import styled from 'styled-components'
-import CONTACTS from '../constants/contactinfo/contactinfo'
-import { FontIcons } from '../components/Common'
+import styled from 'styled-components';
+import CONTACTS from '../constants/contactinfo/contactinfo';
+import { FontIcons } from '../components/Common';
 
-const CenteredContainer = styled.div`
-    display: flex;
-    justify-content: center;
-`
-
-const Container = styled.div`
-    display: flex;
-    flex-direction: column;
-`
-
-const BodyContainer = styled.div`
+// Assuming you have a theme context or provider
+const Card = styled.div`
+    background-color: white;
+    box-shadow: 0 10px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    padding: 50px;
     display: flex;
     flex-direction: column;
-`
+    align-items: center;
+    max-width: 800px;
+    margin: auto;
+`;
+
+const Title = styled.h2`
+    color: ${({ theme }) => theme.colors.primary || '#007bff'};
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 20px;
+`;
 
 const LineContainer = styled.div`
-    padding-bottom: 10px;
     display: flex;
-`
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 10px;
+`;
 
-const Title = styled.div`
-    color: ${({ theme }) => theme.colors.blue};
-    font: ${({ theme }) => theme.fonts.heading};
-    padding-bottom: 50px;
-    display: flex;
-    justify-content: center;
-`
+const Text = styled.span`
+    font-family: 'Roboto', sans-serif;
+    color: ${({ theme }) => theme.colors.text || '#333'};
+`;
 
-const BoldBodyText = styled.div`
-    color: ${({ theme }) => theme.colors.black};
-    font: ${({ theme }) => theme.fonts.medium24bold};
-`
-
-const BodyText = styled.div`
-    color: ${({ theme }) => theme.colors.black};
-    font: ${({ theme }) => theme.fonts.medium24};
-`
-
-const Organizer = ({ type, info }) => {
+export default function ContactCard() {
     return (
-        <LineContainer>
-            <BoldBodyText>
-                {type}
-                &nbsp;
-            </BoldBodyText>
-            <BodyText>
-                {info}
-            </BodyText>
-        </LineContainer>
-    )
-}
-
-export default function Contact() {
-    return (
-        <CenteredContainer>
-            <Container>
-                <Title>
-                    GET IN TOUCH:
-                </Title>
-                <BodyContainer>
-                    {CONTACTS.map((contact) => (
-                        <Organizer
-                            key={contact.type}
-                            type={contact.type}
-                            info={contact.info}
-                        />
-                    ))}
-                </BodyContainer>
-                <FontIcons />
-            </Container>
-        </CenteredContainer>
-    )
+        <Card>
+            <Title>Get In Touch</Title>
+            <br /><br />
+            {CONTACTS.map((contact, index) => (
+                <LineContainer key={index}>
+                    <Text><strong>{contact.type}</strong></Text>
+                    <Text>{contact.info}</Text>
+                </LineContainer>
+            ))}
+            <br /><br />
+            <FontIcons />
+        </Card>
+    );
 }
