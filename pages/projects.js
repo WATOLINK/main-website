@@ -103,7 +103,7 @@ export default function Projects() {
                 /> */}
                 <ProjectCardContainer>
                     {PROJECTS.map((project) => (
-                        <StyledCardDiv color={'white'}>
+                        <StyledCardDiv key={project.name} color={'white'}>
                             <Image
                                 alt={project.name}
                                 src={project.icon}
