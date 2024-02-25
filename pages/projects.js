@@ -139,7 +139,7 @@ export default function Projects() {
                 <ProjectVideoCaption>
                     <strong>Grand Winner (1st Place):</strong> Watolink from the
                     University of Waterloo. Their prize was $2,000 USD and 1
-                    hour live consultation with Branch Out's Director of
+                    hour live consultation with Branch Out&apos;s Director of
                     Research about product commercialization
                 </ProjectVideoCaption>
                 <BottomText>Stay Tuned!</BottomText>
