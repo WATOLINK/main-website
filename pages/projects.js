@@ -105,6 +105,7 @@ export default function Projects() {
                     {PROJECTS.map((project) => (
                         <StyledCardDiv color={'white'}>
                             <Image
+                                alt={project.name}
                                 src={project.icon}
                                 width={500}
                                 height={500}
