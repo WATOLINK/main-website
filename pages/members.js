@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 import Member from '../components/Member'
 import GROUPS from '../constants/members'
+import SmallLogo from '../public/logos/SmallLogo.svg'
+import Image from 'next/image'
 
 const Title = styled.h1`
     font: ${({ theme }) => theme.fonts.heading};
@@ -28,7 +30,13 @@ const MemberRow = styled.div`
     justify-content: center;
     flex-wrap: wrap;
 `
-
+const SeparatorLine = styled.hr`
+    margin: 10px 10px;
+    height: 3px;
+    background-color: ${({ theme }) => theme.colors.blue};
+    border: none;
+    width: 70vw;
+`
 const Spacer = styled.br`
     height: 100px;
 `
@@ -44,9 +52,22 @@ const Spacer = styled.br`
 export default function Members() {
     return (
         <PageContainer>
-            <Title>MEET THE TEAM</Title>
+                <Title style={{ display: 'flex', alignItems: 'center', marginRight: '10px' }}>PEOPLE OF 
+                    <Image
+                        alt="WATOLINK logo"
+                        src={SmallLogo}
+                        layout="fixed"
+                        width={320}
+                        height={120}
+                        style={{paddingBottom: '10px'}}
+                    />
+               </Title>
+
             {GROUPS.map((group) => (
+                <div>
+                <SeparatorLine></SeparatorLine>
                 <GroupContainer key={group.title}>
+
                     {group.title === 'Faculty Advisors' && <Spacer />}
                     <Subtitle>{group.title}</Subtitle>
                     <MemberRow>
@@ -68,6 +89,7 @@ export default function Members() {
                         ))}
                     </MemberRow>
                 </GroupContainer>
+                </div>
             ))}
         </PageContainer>
     )
