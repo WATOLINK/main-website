@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import Member from '../components/Member'
+import Lead from '../components/Lead'
 import GROUPS from '../constants/members'
 import SmallLogo from '../public/logos/SmallLogo.svg'
 import Image from 'next/image'
@@ -35,7 +36,7 @@ const SeparatorLine = styled.hr`
     height: 3px;
     background-color: ${({ theme }) => theme.colors.blue};
     border: none;
-    width: 70vw;
+    width: 90vw;
 `
 const Spacer = styled.br`
     height: 100px;
@@ -72,7 +73,7 @@ export default function Members() {
                     <Subtitle>{group.title}</Subtitle>
                     <MemberRow>
                         {group.leads?.map((lead) => (
-                            <Member
+                            <Lead
                                 key={lead.name}
                                 color={group.color}
                                 {...lead}

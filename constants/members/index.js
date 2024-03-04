@@ -1,9 +1,6 @@
-import DIRECTORS from './directors'
-import AI from './ai'
-import BSR from './bsr'
-import CONSOF from './consof'
-import SIDE from './side'
-import MECHDESIGN from './mechdesign'
+import OPERATIONS from './operations'
+import WHEELCHAIR from './wheelchair'
+import GAMING from './gaming'
 import FACULTYADVISORS from './facultyadvisors'
 
 import { theme } from '../../theme'
@@ -13,39 +10,22 @@ const { lightpurple, lightblue, yellow, pink, green, greyblue, grey } =
 
 const GROUPS = [
     {
-        title: 'Managing Directors',
-        members: DIRECTORS,
-        color: lightpurple,
+        title: 'Operational Team',
+        leads: OPERATIONS.filter((operations) => operations.lead),
+        members: OPERATIONS.filter((operations) => !operations.lead),
+        color: grey,
     },
     {
-        title: 'Artificial Intelligence',
-        leads: AI.filter((ai) => ai.lead),
-        members: AI.filter((ai) => !ai.lead),
-        color: lightblue,
+        title: 'BCI Gaming Team',
+        leads: GAMING.filter((gaming) => gaming.lead),
+        members: GAMING.filter((gaming) => !gaming.lead),
+        color: grey,
     },
     {
-        title: 'Bio-Signal Research',
-        leads: BSR.filter((bsr) => bsr.lead),
-        members: BSR.filter((bsr) => !bsr.lead),
-        color: yellow,
-    },
-    {
-        title: 'Connected Software',
-        leads: CONSOF.filter((consof) => consof.lead),
-        members: CONSOF.filter((consof) => !consof.lead),
-        color: pink,
-    },
-    {
-        title: 'Systems Integration',
-        leads: SIDE.filter((side) => side.lead),
-        members: SIDE.filter((side) => !side.lead),
-        color: green,
-    },
-    {
-        title: 'Mechanical Design',
-        leads: MECHDESIGN.filter((mech) => mech.lead),
-        members: MECHDESIGN.filter((mech) => !mech.lead),
-        color: greyblue,
+        title: 'BCI Wheelchair Team',
+        leads: WHEELCHAIR.filter((wheelchair) => wheelchair.lead),
+        members: WHEELCHAIR.filter((wheelchair) => !wheelchair.lead),
+        color: grey,
     },
     {
         title: 'Faculty Advisors',

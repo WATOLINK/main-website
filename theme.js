@@ -10,7 +10,7 @@ const fonts = {
     // small22bold: `normal 600 22px 'Poppins', sans-serif`,
 
     medium24: `normal 500 24px 'Poppins', sans-serif`,
-    medium24bold: `normal 700 24px 'Poppins', sans-serif`,
+    medium24bold: `normal 700 24px 'sPoppins', sans-serif`,
 
     medium28: `normal 500 28px 'Poppins', sans-serif`,
     medium28bold: `normal 700 28px 'Poppins', sans-serif`,
@@ -18,6 +18,9 @@ const fonts = {
     subheading: `normal 600 30px 'Poppins', sans-serif`,
     heading: `normal 600 45px 'Poppins', sans-serif`,
     largeheading: `normal 700 72px 'Poppins', sans-serif`,
+
+    lead1: `normal 900 30px 'Inter', sans-serif;-webkit-text-stroke: 1px #0088FF; color: white;`,
+    lead2: `italic 500 20px 'Inter', sans-serif; color: #000000;`,
 }
 
 const colors = {
