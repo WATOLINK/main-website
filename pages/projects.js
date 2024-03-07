@@ -69,7 +69,7 @@ const ProjectVideoTitle = styled.div`
 `
 
 const ProjectVideoTitleContainer = styled.div`
-    margin: 50px 0;
+    margin: 35px 0;
 `
 
 const ProjectVideoContainer = styled.iframe`
@@ -142,7 +142,7 @@ export default function Projects() {
                     hour live consultation with Branch Out&apos;s Director of
                     Research about product commercialization
                 </ProjectVideoCaption>
-                <BottomText>Stay Tuned!</BottomText>
+                <Image alt="neruotechx icon" width={400} height={150} src={"/icons/NeuroTechX.svg"} />
             </Container>
         </>
     )
