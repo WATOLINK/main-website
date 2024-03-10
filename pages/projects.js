@@ -37,17 +37,20 @@ const BottomText = styled.div`
 `
 
 const StyledCardDiv = styled.div`
-    width: fit;
+    width: 50%;
     border-radius: 30px;
     outline: rgb(0, 136, 254, 0.2) solid 4px;
-    box-shadow: 0px 1px 5px black;
+    box-shadow: 0px 1px 10px ${({ theme }) => theme.colors.blue};
     padding: 30px 70px;
+    padding-bottom: 50px;
 `
 
 const ProjectCardContainer = styled.div`
     display: flex;
     gap: 10%;
     margin: 100px auto;
+    max-width: 60%;
+    justify-items: space-between;
 `
 
 const ProjectCardTitle = styled.div`
@@ -55,11 +58,12 @@ const ProjectCardTitle = styled.div`
     font: ${({ theme }) => theme.fonts.heading};
     text-align: center;
     margin: 20px 0;
-    font-size: 1.4em;
+    font-size: 2em;
 `
 
 const ProjectCardDescription = styled.div`
     font: ${({ theme }) => theme.fonts.small20bold};
+    font-size: 1.1em;
 `
 
 const ProjectVideoTitle = styled.div`
@@ -83,6 +87,11 @@ const ProjectVideoCaption = styled.div`
     padding: 0 150px;
 `
 
+const ImageContainerLogo = styled.div`
+    width: fit;
+    margin: 0 auto;
+`
+
 export default function Projects() {
     return (
         <>
@@ -104,12 +113,14 @@ export default function Projects() {
                 <ProjectCardContainer>
                     {PROJECTS.map((project) => (
                         <StyledCardDiv key={project.name} color={'white'}>
-                            <Image
-                                alt={project.name}
-                                src={project.icon}
-                                width={500}
-                                height={500}
-                            />
+                            <ImageContainerLogo>
+                                <Image
+                                    alt={project.name}
+                                    src={project.icon}
+                                    width={500}
+                                    height={500}
+                                />
+                            </ImageContainerLogo>
                             <ProjectCardTitle>{project.name}</ProjectCardTitle>
                             <ProjectCardDescription>
                                 {project.description}
@@ -142,7 +153,12 @@ export default function Projects() {
                     hour live consultation with Branch Out&apos;s Director of
                     Research about product commercialization
                 </ProjectVideoCaption>
-                <Image alt="neruotechx icon" width={400} height={150} src={"/icons/NeuroTechX.svg"} />
+                <Image
+                    alt="neruotechx icon"
+                    width={400}
+                    height={150}
+                    src={'/icons/NeuroTechX.svg'}
+                />
             </Container>
         </>
     )

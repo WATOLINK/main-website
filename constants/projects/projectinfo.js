@@ -4,12 +4,12 @@ import bci_gaming from '../../public/project_icons/bci_gaming_img.svg'
 const PROJECTS = [
     {
         name: 'BCI GAMING',
-        description: 'Description of what the gaming team is doing.',
+        description: 'Pursuing the development of a novelly designed western-themed Unity-based video game incorporating Brain-Computer Interface (BCI) technology, using blinks detected from EEG.',
         icon: bci_gaming
     },
     {
         name: 'BCI WHEELCHAIR',
-        description: 'Description of what the wheelchair team is doing.',
+        description: "Developing a novel system which utilizes SSVEP, P300, and Motor Imagery Paradigms to move a retrofitted manual wheelchair with the user’s brain.",
         icon: bci_wheelchair
     }
 ]
