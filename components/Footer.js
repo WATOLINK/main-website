@@ -6,22 +6,26 @@ import NAVLINKS from '../constants/navlinks'
 const Container = styled.div`
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     padding-top: 50px;
     background-color: ${({ theme }) => theme.colors.lightblue};
 `
 
 const TopContainer = styled.div`
     display: flex;
-    justify-content: space-between;
-    padding: 0px 100px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 0rem clamp(1rem, 5vw, 16rem);
 `
 
 const LinkContainer = styled.div`
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
     border-radius: 25px;
-    padding: 20px 60px;
+    padding: 1rem clamp(2rem, 5vw, 6rem);
     background-color: ${({ theme }) => theme.colors.white};
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
 `
 
 const StyledCopyright = styled.div`
@@ -38,7 +42,7 @@ const StyledLink = styled.div`
     font: ${({ theme }) => theme.fonts.footer};
     text-align: center;
     transition: color 0.3s, background-color 0.2s;
-    padding: 20px;
+    padding: 10px;
     cursor: pointer;
     display: inline-block;
 

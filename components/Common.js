@@ -36,12 +36,13 @@ const SocialMediaContainer = styled.div`
     flex-direction: column;
     justify-content: space-between;
     border-radius: 25px;
-    padding: 60px 20px;
+    padding: 3rem 6rem;
 
     & > div {
         padding: 5px 0px 0px 10px;
     }
     background-color: ${({ theme }) => theme.colors.white};
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
 `
 
 const CaptionContainer = styled.div`

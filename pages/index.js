@@ -61,6 +61,22 @@ const InfoDiv = styled.div`
     padding: 0px 70px;
 `
 
+const CarouselContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 0 50px;
+`
+
+const CarouselItem = styled.div`
+    flex: none;
+    width: 100%;
+    transition: transform 0.5s ease;
+`
+
 const Info = ({ heading, subheading, src, children }) => (
     <InfoDiv>
         <div
@@ -156,6 +172,19 @@ export default function About() {
                         </Text>
                     </CaptionContainer>
                 </ContentContainer>
+
+                {/* <ContentContainer>
+                    <CarouselContainer>
+                        <CarouselItem>
+                            <Image
+                                alt="testing"
+                                src="/logos/BigGoose.svg"
+                                layout="fill"
+                            />
+                        </CarouselItem>
+                    </CarouselContainer>
+                </ContentContainer> */}
+
                 <ContentContainer>
                     <SponsorContainer>
                         <Heading>OUR PARTNERS</Heading>
