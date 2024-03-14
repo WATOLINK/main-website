@@ -2,6 +2,8 @@ import styled from 'styled-components'
 import Link from 'next/link'
 import SocialMediaBlock from '../components/Common'
 import NAVLINKS from '../constants/navlinks'
+import BigGoose from '../public/logos/BigGoose.svg'
+import Image from 'next/image'
 
 const Container = styled.div`
     display: flex;
@@ -9,6 +11,9 @@ const Container = styled.div`
     justify-content: space-between;
     padding-top: 50px;
     background-color: ${({ theme }) => theme.colors.lightblue};
+    background-image: url('/logos/BigGoose.svg');
+    background-repeat: repeat-x;
+    background-size: auto 100%;
 `
 
 const TopContainer = styled.div`
