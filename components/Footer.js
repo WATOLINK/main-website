@@ -60,18 +60,16 @@ const StyledLink = styled.div`
 export default function Footer({ page, bottomed = false }) {
     return (
         <Container>
-            {page !== 'Contact' && (
-                <TopContainer bottomed={bottomed}>
-                    <SocialMediaBlock />
-                    <LinkContainer>
-                        {NAVLINKS.map((header) => (
-                            <Link key={header.name} href={header.href}>
-                                <StyledLink>{header.name}</StyledLink>
-                            </Link>
-                        ))}
-                    </LinkContainer>
-                </TopContainer>
-            )}
+            <TopContainer bottomed={bottomed}>
+                <SocialMediaBlock />
+                <LinkContainer>
+                    {NAVLINKS.map((header) => (
+                        <Link key={header.name} href={header.href}>
+                            <StyledLink>{header.name}</StyledLink>
+                        </Link>
+                    ))}
+                </LinkContainer>
+            </TopContainer>
             <StyledCopyright> &copy; WATOLINK 2022 </StyledCopyright>
         </Container>
     )
