@@ -12,7 +12,7 @@ const Container = styled.div`
 `
 
 const ImageContainer = styled.div`
-    display: 'flex';
+    display: flex;
     flex-shrink: 0;
     cursor: pointer;
 `
@@ -20,7 +20,9 @@ const ImageContainer = styled.div`
 const HeaderContainer = styled.div`
     display: flex;
     flex-wrap: wrap;
-    flex-shrink: 0;
+    flex-shrink: 1;
+    justify-content: center;
+    align-items: center;
 `
 
 const StyledLink = styled.a`

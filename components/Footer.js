@@ -70,7 +70,7 @@ export default function Footer({ page, bottomed = false }) {
                     ))}
                 </LinkContainer>
             </TopContainer>
-            <StyledCopyright> &copy; WATOLINK 2022 </StyledCopyright>
+            <StyledCopyright> &copy; WATOLINK 2024 </StyledCopyright>
         </Container>
     )
 }
