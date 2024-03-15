@@ -1,9 +1,8 @@
 import styled from 'styled-components'
 import Link from 'next/link'
+import Image from 'next/image'
 import SocialMediaBlock from '../components/Common'
 import NAVLINKS from '../constants/navlinks'
-import BigGoose from '../public/logos/BigGoose.svg'
-import Image from 'next/image'
 
 const Container = styled.div`
     display: flex;
@@ -28,9 +27,10 @@ const LinkContainer = styled.div`
     flex-direction: column;
     justify-content: space-evenly;
     border-radius: 25px;
-    padding: 1rem clamp(2rem, 5vw, 6rem);
+    padding: 2rem 6rem;
     background-color: ${({ theme }) => theme.colors.white};
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
 `
 
 const StyledCopyright = styled.div`
@@ -43,13 +43,13 @@ const StyledCopyright = styled.div`
 
 const StyledLink = styled.div`
     color: ${({ theme }) => theme.colors.blue};
-    background: ${({ theme }) => theme.colors.white};
     font: ${({ theme }) => theme.fonts.footer};
     text-align: center;
     transition: color 0.3s, background-color 0.2s;
     padding: 10px;
     cursor: pointer;
     display: inline-block;
+    z-index: 2;
 
     &:hover {
         color: ${({ theme }) => theme.colors.accent};
@@ -68,6 +68,22 @@ export default function Footer({ page, bottomed = false }) {
                             <StyledLink>{header.name}</StyledLink>
                         </Link>
                     ))}
+
+                    <div
+                        style={{
+                            position: 'absolute',
+                            bottom: '100px', // Adjust as necessary
+                            left: '200px', // Adjust as necessary
+                        }}
+                    >
+                        <Image
+                            src="/icons/footerbrain1.png"
+                            alt="Brain Icon"
+                            width={145}
+                            height={84}
+                            objectFit="contain"
+                        />
+                    </div>
                 </LinkContainer>
             </TopContainer>
             <StyledCopyright> &copy; WATOLINK 2024 </StyledCopyright>

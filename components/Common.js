@@ -36,7 +36,7 @@ const SocialMediaContainer = styled.div`
     flex-direction: column;
     justify-content: space-between;
     border-radius: 25px;
-    padding: 3rem 6rem;
+    padding: 2rem 6rem;
 
     & > div {
         padding: 5px 0px 0px 10px;
@@ -49,8 +49,11 @@ const CaptionContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     text-align: center;
     padding: 0 50px;
+    position: relative;
+    height: 100%;
 `
 
 const Organizer = ({ image, filename, link, custom }) => {
@@ -86,6 +89,22 @@ export default function SocialMediaBlock() {
                 <Image alt="WATOLINK logo" src={SmallLogo} layout="fixed" />
             </ImageContainer>
             <CaptionContainer>
+                <div
+                    style={{
+                        position: 'absolute',
+                        bottom: '30px', // Adjust as necessary
+                        left: '-65px', // Adjust as necessary
+                        zIndex: 1,
+                    }}
+                >
+                    <Image
+                        src="/icons/footerbrain2.png"
+                        alt="Brain Icon"
+                        width={90}
+                        height={115}
+                        objectFit="contain"
+                    />
+                </div>
                 <StyledSocialMediaMessage>
                     Get In Touch!
                 </StyledSocialMediaMessage>
