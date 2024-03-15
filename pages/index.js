@@ -116,12 +116,15 @@ const SponsorContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex-wrap: wrap;
 `
 
 const Sponsors = styled.div`
     display: flex;
     width: 100vw;
     justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
 `
 
 export default function About() {
