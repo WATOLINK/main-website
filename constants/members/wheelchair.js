@@ -1,17 +1,27 @@
+import Owen from '../../public/members/wheelchair/Owen.svg'
+import Maggie from '../../public/members/wheelchair/Maggie.svg'
+import Pranav from '../../public/members/wheelchair/Pranav.svg'
+
 const wheelchair = [
     {
-        position: 'Project Lead',
+        position: 'Mechanical-Lead',
         name: 'OWEN CLAYTON',
+        program: 'Biomedical Engineering',
+        icon: Owen,
         lead: true,
     },
     {
-        position: 'Project Lead',
-        name: 'PRANAV PRADHAN',
-        lead: true,
-    },
-    {
-        position: 'Project Lead',
+        position: 'Software-Lead',
+        program: 'Biomedical Engineering',
         name: 'MAGGIE WANG',
+        icon: Maggie,
+        lead: true,
+    },
+    {
+        position: 'ML-Lead',
+        name: 'PRANAV PRADHAN',
+        program: 'Mechatronics Engineering',
+        icon: Pranav,
         lead: true,
     },
     {

@@ -1,12 +1,17 @@
+import Yaxin from '../../public/members/gaming/Yaxin.svg'
+
 const GAMING = [
     {
-        position: 'Project Lead',
+        position: 'Co-Lead',
+        program: 'Biomedical Engineering',
         name: 'ALEXIS BADER',
         lead: true,
     },
     {
-        position: 'Project Lead',
+        position: 'Co-Lead',
+        program: 'Biomedical Engineering',
         name: 'YAXIN WANG',
+        icon: Yaxin,
         lead: true,
     },
     {

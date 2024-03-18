@@ -19,8 +19,9 @@ const fonts = {
     heading: `normal 600 45px 'Poppins', sans-serif`,
     largeheading: `normal 700 72px 'Poppins', sans-serif`,
 
-    lead1: `normal 900 30px 'Inter', sans-serif;-webkit-text-stroke: 1px #0088FF; color: white;`,
+    lead1: `normal 600 30px 'Inter', sans-serif;-webkit-text-stroke: 1px #0088FF; color: white;`,
     lead2: `italic 500 20px 'Inter', sans-serif; color: #000000;`,
+    lead3: `normal 800 12px 'Inter', sans-serif; color: #005396;`,
 }
 
 const colors = {

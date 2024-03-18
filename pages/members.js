@@ -31,6 +31,13 @@ const MemberRow = styled.div`
     justify-content: center;
     flex-wrap: wrap;
 `
+const LeadRow = styled.div`
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 0 auto;
+`
 const SeparatorLine = styled.hr`
     margin: 10px 10px;
     height: 3px;
@@ -71,7 +78,7 @@ export default function Members() {
 
                     {group.title === 'Faculty Advisors' && <Spacer />}
                     <Subtitle>{group.title}</Subtitle>
-                    <MemberRow>
+                    <LeadRow>
                         {group.leads?.map((lead) => (
                             <Lead
                                 key={lead.name}
@@ -79,7 +86,7 @@ export default function Members() {
                                 {...lead}
                             />
                         ))}
-                    </MemberRow>
+                    </LeadRow>
                     <MemberRow>
                         {group.members?.map((member) => (
                             <Member

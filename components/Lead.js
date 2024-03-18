@@ -44,20 +44,26 @@ const Name = styled.h2`
 `;
 
 const Position = styled.h3`
-    margin: 20px 0 0 0;
+    margin: 0 0 0 0;
     font: ${({ theme }) => theme.fonts.lead2}; 
     text-align: center;
     position: absolute;
-    bottom: 25px;
+    white-space: nowrap;
     left: 50%;
     transform: translateX(-50%);
 `;
 
-export default function Lead({ color, name, position, icon }) {
+const Program = styled.h3`
+    font: ${({ theme }) => theme.fonts.lead3}; 
+    text-align: center;
+`;
+
+export default function Lead({ color, name, program, position, icon }) {
     return (
         <ProfileContainer style={{ backgroundColor: 'rgba(0, 136, 255, 0.5)' }}>
             <ProfileBanner>
                 <Name>{name}</Name>
+                <Program>{program}</Program>
                 <Position>{position}</Position>
             </ProfileBanner>
             <ProfileImageContainer>
