@@ -9,6 +9,7 @@ const Container = styled.div`
     position: relative;
     display: flex;
     flex-direction: column;
+    justify-content: center;
 `
 
 const Title = styled.div`
@@ -25,6 +26,14 @@ const Title = styled.div`
 `
 
 const ProjectCardContainer = styled.div`
+    @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 100px;
+    }
+    @media (max-width: 425px) {
+        width: 50%;
+        margin: 100px 13.5%;
+    }
     display: flex;
     gap: 10%;
     margin: 100px auto;
@@ -37,6 +46,9 @@ const BrainImage = styled.div`
     @media (max-width: 1024px) {
         top: 5%;
         right: 13%;
+    }
+    @media (max-width: 768px) {
+        top: 2%;
     }
     position: absolute;
     width: 88.28px;
@@ -57,6 +69,12 @@ const BrainImageBottom = styled.div`
         width: 50px;
         height: 60px;
         transform: translateY(40px) rotate(4.05deg);
+    }
+    @media (max-width: 768px) {
+        width: 30px;
+        height: 5px;
+        right: 10%;
+        transform: translateY(60px) rotate(4.05deg);
     }
     position: absolute;
     width: 88.28px;
@@ -79,6 +97,10 @@ const LoopVector = styled.div`
     @media (max-width: 1024px) {
         width: 150px;
     }
+    @media (max-width: 768px) {
+        width: 100px;
+        height: 50px;
+    }
     position: absolute;
     width: 380px;
     height: 91px;
@@ -98,6 +120,10 @@ const DuckFeetBottom = styled.div`
         transform: translateY(120px) rotate(205.05deg);
         right: 5%;
         width: 100px;
+    }
+    @media (max-width: 768px) {
+        width: 50px;
+        height: 10px;
     }
     position: absolute;
     right: 14%;

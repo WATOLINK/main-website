@@ -13,6 +13,9 @@ const ProjectVideoTitleContainer = styled.div`
 
 const ProjectVideoContainer = styled.iframe`
     margin: 0 auto;
+    @media (max-width: 425px) {
+        width: 75%;
+    }
 `
 
 const ProjectVideoCaption = styled.div`
