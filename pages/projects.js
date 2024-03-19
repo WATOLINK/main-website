@@ -53,8 +53,10 @@ const BrainImageBottom = styled.div`
         right: 13%;
     }
     @media (max-width: 1024px) {
-        top: 40%;
         right: 13%;
+        width: 50px;
+        height: 60px;
+        transform: translateY(40px) rotate(4.05deg);
     }
     position: absolute;
     width: 88.28px;
@@ -74,6 +76,9 @@ const BrainImageReverse = styled.div`
 `
 
 const LoopVector = styled.div`
+    @media (max-width: 1024px) {
+        width: 150px;
+    }
     position: absolute;
     width: 380px;
     height: 91px;
@@ -86,6 +91,14 @@ const DuckFeetTop = styled.div`
 `
 
 const DuckFeetBottom = styled.div`
+    @media (max-width: 1440px) {
+        transform: translateY(140px) rotate(205.05deg);
+    }
+    @media (max-width: 1024px) {
+        transform: translateY(120px) rotate(205.05deg);
+        right: 5%;
+        width: 100px;
+    }
     position: absolute;
     right: 14%;
     transform: translateY(120px) rotate(210.05deg);
@@ -98,7 +111,6 @@ const GroupedContainer = styled.div`
 `
 
 export default function Projects() {
-    const blob_block = 'BCI GAMING'
     return (
         <>
             {/* TODO: fix head */}
