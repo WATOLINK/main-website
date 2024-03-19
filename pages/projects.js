@@ -1,10 +1,12 @@
 import Head from 'next/head'
 import styled from 'styled-components'
 import ProjectCard from '../components/ProjectCard'
+import ProjectVideoSection from '../components/ProjectVideoSection'
 import PROJECTS from '../constants/projects'
 import Image from 'next/image'
 
 const Container = styled.div`
+    position: relative;
     display: flex;
     flex-direction: column;
 `
@@ -22,77 +24,81 @@ const Title = styled.div`
     margin-bottom: 50px;
 `
 
-const BodyText = styled.div`
-    color: ${({ theme }) => theme.colors.black};
-    font: ${({ theme }) => theme.fonts.medium24bold};
-    text-align: center;
-    white-space: pre;
-`
-const BottomText = styled.div`
-    color: ${({ theme }) => theme.colors.blue};
-    font: ${({ theme }) => theme.fonts.medium24bold};
-    text-align: center;
-    margin-top: 2%;
-    margin-bottom: 2%;
-`
-
-const StyledCardDiv = styled.div`
-    width: 50%;
-    border-radius: 30px;
-    outline: rgb(0, 136, 254, 0.2) solid 4px;
-    box-shadow: 0px 1px 10px ${({ theme }) => theme.colors.blue};
-    padding: 30px 70px;
-    padding-bottom: 50px;
-`
-
 const ProjectCardContainer = styled.div`
     display: flex;
     gap: 10%;
     margin: 100px auto;
-    max-width: 60%;
+    width: 75%;
+    max-width: 75%;
     justify-items: space-between;
 `
 
-const ProjectCardTitle = styled.div`
-    color: ${({ theme }) => theme.colors.blue};
-    font: ${({ theme }) => theme.fonts.heading};
-    text-align: center;
-    margin: 20px 0;
-    font-size: 2em;
+const BrainImage = styled.div`
+    @media (max-width: 1024px) {
+        top: 5%;
+        right: 13%;
+    }
+    position: absolute;
+    width: 88.28px;
+    height: 98.91px;
+    transform: rotate(4.05deg);
+    color: white;
+    right: 13%;
+    top: 3%;
 `
 
-const ProjectCardDescription = styled.div`
-    font: ${({ theme }) => theme.fonts.small20bold};
-    font-size: 1.1em;
+const BrainImageBottom = styled.div`
+    @media (max-width: 1024px) {
+        top: 40%;
+        right: 13%;
+    }
+    @media (max-width: 1024px) {
+        top: 40%;
+        right: 13%;
+    }
+    position: absolute;
+    width: 88.28px;
+    height: 98.91px;
+    transform: rotate(4.05deg);
+    color: white;
+    right: 17%;
+    top: 37%;
 `
 
-const ProjectVideoTitle = styled.div`
-    font: ${({ theme }) => theme.fonts.subheading};
-    text-align: center;
-    font-size: 1.5rem;
+const BrainImageReverse = styled.div`
+    position: relative;
+    width: 88.28px;
+    height: 98.91px;
+    bottom: 0;
+    transform: matrix(-1, 0.07, 0.07, 1, -10, -70);
 `
 
-const ProjectVideoTitleContainer = styled.div`
-    margin: 35px 0;
+const LoopVector = styled.div`
+    position: absolute;
+    width: 380px;
+    height: 91px;
+    right: -2%;
+    transform: translateY(100px);
 `
 
-const ProjectVideoContainer = styled.iframe`
-    margin: 0 auto;
+const DuckFeetTop = styled.div`
+    opacity: 60%;
 `
 
-const ProjectVideoCaption = styled.div`
-    text-align: center;
-    margin: 50px 0;
-    font: ${({ theme }) => theme.fonts.small20};
-    padding: 0 150px;
+const DuckFeetBottom = styled.div`
+    position: absolute;
+    right: 14%;
+    transform: translateY(120px) rotate(210.05deg);
+    opacity: 60%;
 `
 
-const ImageContainerLogo = styled.div`
-    width: fit;
-    margin: 0 auto;
+const GroupedContainer = styled.div`
+    position: relative;
+    display: flex;
 `
 
 export default function Projects() {
+    const blob_block = 'BCI GAMING'
     return (
         <>
             {/* TODO: fix head */}
@@ -105,60 +111,74 @@ export default function Projects() {
             </Head>
             <Container>
                 <Title>CURRENT PROJECTS</Title>
-                {/* <Image
-                    src={'/blue_blobs/first_blob.svg'}
-                    width={50}
-                    height={50}
-                /> */}
-                <ProjectCardContainer>
-                    {PROJECTS.map((project) => (
-                        <StyledCardDiv key={project.name} color={'white'}>
-                            <ImageContainerLogo>
-                                <Image
-                                    alt={project.name}
-                                    src={project.icon}
-                                    width={500}
-                                    height={500}
-                                />
-                            </ImageContainerLogo>
-                            <ProjectCardTitle>{project.name}</ProjectCardTitle>
-                            <ProjectCardDescription>
-                                {project.description}
-                            </ProjectCardDescription>
-                        </StyledCardDiv>
-                    ))}
-                </ProjectCardContainer>
+                <Container>
+                    <ProjectCardContainer>
+                        <ProjectCard
+                            project={PROJECTS.at(0)}
+                            alt={PROJECTS.at(0).name}
+                        />
+                        <ProjectCard
+                            project={PROJECTS.at(1)}
+                            alt={PROJECTS.at(1).name}
+                        />
+                        <BrainImage>
+                            <Image
+                                alt={'brain_blob'}
+                                src={'/blue_blobs/first_blob.png'}
+                                width={100}
+                                height={120}
+                            />
+                        </BrainImage>
+                    </ProjectCardContainer>
+                    <GroupedContainer>
+                        <DuckFeetTop>
+                            <Image
+                                alt={'duck_feet'}
+                                src={'/blue_blobs/duck_feet.png'}
+                                width={400}
+                                height={100}
+                            />
+                        </DuckFeetTop>
+                        <BrainImageReverse>
+                            <Image
+                                alt={'brain_blob'}
+                                src={'/blue_blobs/first_blob.png'}
+                                width={100}
+                                height={120}
+                            />
+                        </BrainImageReverse>
+                    </GroupedContainer>
+                </Container>
                 <br></br>
                 <Title>Past Projects</Title>
-                <ProjectVideoTitleContainer>
-                    <ProjectVideoTitle>
-                        NeuroTechX 2022 Neurotechnology Competition
-                    </ProjectVideoTitle>
-                    <ProjectVideoTitle>
-                        Winning Submission Video:
-                    </ProjectVideoTitle>
-                </ProjectVideoTitleContainer>
-                <ProjectVideoContainer
-                    width="560"
-                    height="315"
-                    src="https://www.youtube.com/embed/dEvILV4_CIg?start=2159"
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen
-                ></ProjectVideoContainer>
-                <ProjectVideoCaption>
-                    <strong>Grand Winner (1st Place):</strong> Watolink from the
-                    University of Waterloo. Their prize was $2,000 USD and 1
-                    hour live consultation with Branch Out&apos;s Director of
-                    Research about product commercialization
-                </ProjectVideoCaption>
-                <Image
-                    alt="neruotechx icon"
-                    width={400}
-                    height={150}
-                    src={'/icons/NeuroTechX.svg'}
-                />
+                <Container>
+                    <GroupedContainer>
+                        <BrainImageBottom>
+                            <Image
+                                alt={'brain_blob'}
+                                src={'/blue_blobs/first_blob.png'}
+                                width={100}
+                                height={120}
+                            />
+                        </BrainImageBottom>
+                        <LoopVector>
+                            <Image
+                                src={'/blue_blobs/loop_vector.png'}
+                                width={350}
+                                height={91}
+                            />
+                        </LoopVector>
+                        <DuckFeetBottom>
+                            <Image
+                                alt={'duck_feet'}
+                                src={'/blue_blobs/duck_feet.png'}
+                                width={160}
+                                height={50}
+                            />
+                        </DuckFeetBottom>
+                    </GroupedContainer>
+                    <ProjectVideoSection />
+                </Container>
             </Container>
         </>
     )
