@@ -19,6 +19,9 @@ const ProjectVideoContainer = styled.iframe`
 `
 
 const ProjectVideoCaption = styled.div`
+    @media (max-width: 425px) {
+        padding: 0 50px;
+    }
     text-align: center;
     margin: 50px 0;
     font: ${({ theme }) => theme.fonts.small20};

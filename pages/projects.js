@@ -31,15 +31,16 @@ const ProjectCardContainer = styled.div`
         gap: 100px;
     }
     @media (max-width: 425px) {
-        width: 50%;
-        margin: 100px 13.5%;
+        width: 100%;
+        margin: 0 12%;
+        gap: 0%;
     }
     display: flex;
     gap: 10%;
     margin: 100px auto;
     width: 75%;
     max-width: 75%;
-    justify-items: space-between;
+    justify-content: center;
 `
 
 const BrainImage = styled.div`
@@ -49,6 +50,9 @@ const BrainImage = styled.div`
     }
     @media (max-width: 768px) {
         top: 2%;
+    }
+    @media (max-width: 425px) {
+        top: 0%;
     }
     position: absolute;
     width: 88.28px;
