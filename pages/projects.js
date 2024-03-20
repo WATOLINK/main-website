@@ -80,6 +80,9 @@ const BrainImageBottom = styled.div`
         right: 10%;
         transform: translateY(60px) rotate(4.05deg);
     }
+    @media (max-width: 425px) {
+        opacity: 0;
+    }
     position: absolute;
     width: 88.28px;
     height: 98.91px;
@@ -105,6 +108,9 @@ const LoopVector = styled.div`
         width: 100px;
         height: 50px;
     }
+    @media (max-width: 425px) {
+        opacity: 0;
+    }
     position: absolute;
     width: 380px;
     height: 91px;
@@ -128,6 +134,9 @@ const DuckFeetBottom = styled.div`
     @media (max-width: 768px) {
         width: 50px;
         height: 10px;
+    }
+    @media (max-width: 425px) {
+        opacity: 0;
     }
     position: absolute;
     right: 14%;
