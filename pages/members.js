@@ -39,7 +39,7 @@ const LeadRow = styled.div`
     margin: 0 auto;
 `
 const SeparatorLine = styled.hr`
-    margin: 10px 10px;
+    margin: 10px auto;
     height: 3px;
     background-color: ${({ theme }) => theme.colors.blue};
     border: none;
@@ -59,16 +59,19 @@ const Spacer = styled.br`
 
 export default function Members() {
     return (
-        <PageContainer>
-                <Title style={{ display: 'flex', alignItems: 'center', marginRight: '10px' }}>PEOPLE OF 
-                    <Image
+        <PageContainer
+        style={{textAlign: 'center', margin: 'auto'}}
+        >
+                <Title style={{ display: 'flex', alignItems: 'center', marginRight: '10px' }}>
+                    PEOPLE OF
+                    <div style={{padding: '0px 0px 0px 0px'}}><Image
                         alt="WATOLINK logo"
                         src={SmallLogo}
                         layout="fixed"
                         width={320}
                         height={120}
-                        style={{paddingBottom: '10px'}}
-                    />
+                        style={{paddingBottom: '11px'}}
+                    /></div>
                </Title>
 
             {GROUPS.map((group) => (

@@ -9,7 +9,7 @@ const OPERATIONS = [
     {
         name: 'CHRIS SAMRA',
         position: 'Co-Founder',
-        program: 'Biomedical Engineering',
+        program: 'Mechatronics Engineering',
         icon: Chris,
         lead: true,
     },
@@ -30,21 +30,19 @@ const OPERATIONS = [
     {
         name: 'AVERY CHIU',
         position: 'Co-Founder',
-        program: 'Biomedical Engineering',
+        program: 'Mechatronics Engineering',
         icon: Avery,
         lead: true,
     },
     {
         name: 'IAN TSAI',
         position: 'Finance Lead',
-        program: 'Biomedical Engineering',
         icon: Ian,
         lead: true,
     },
     {
         name: 'MARYANN KAYRALA',
         position: 'Finance Lead',
-        program: 'Biomedical Engineering',
         icon: Maryann,
         lead: true,
     }

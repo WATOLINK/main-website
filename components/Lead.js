@@ -63,7 +63,7 @@ export default function Lead({ color, name, program, position, icon }) {
         <ProfileContainer style={{ backgroundColor: 'rgba(0, 136, 255, 0.5)' }}>
             <ProfileBanner>
                 <Name>{name}</Name>
-                <Program>{program}</Program>
+                <Program>{program || 'Engineering'}</Program>
                 <Position>{position}</Position>
             </ProfileBanner>
             <ProfileImageContainer>

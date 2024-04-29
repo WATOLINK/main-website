@@ -27,34 +27,42 @@ const wheelchair = [
     {
         position: 'Core Member',
         name: 'Mackenzie Snyder',
+        program: 'Biomedical Engineering',
     },
     {
         position: 'Core Member',
         name: 'Bryan Liu',
+        program: 'System Design Engineering',
     },
     {
         position: 'Core Member',
         name: 'Emily Rose',
+        program: 'Biomedical Engineering',
     },
     {
         position: 'Core Member',
         name: 'Clara Kim',
+        program: 'Biomedical Engineering',
     },
     {
         position: 'Core Member',
         name: 'Wallace Lee',
+        program: 'Biomedical Engineering',
     },
     {
         position: 'Core Member',
         name: 'Naomi Thomas',
+        program: 'Biomedical Engineering',
     },
     {
         position: 'Core Member',
         name: 'Ryan Jing',
+        program: 'Biomedical Engineering',
     },
     {
         position: 'Core Member',
         name: 'Miranda Chen',
+        program: 'Biomedical Engineering',
     },
     {
         position: 'Core Member',
@@ -63,6 +71,7 @@ const wheelchair = [
     {
         position: 'Core Member',
         name: 'Ryan Nguyen',
+        program: 'Software Engineering'
     },
     {
         position: 'Core Member',
