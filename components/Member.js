@@ -33,11 +33,17 @@ const Name = styled.p`
 
 const Position = styled.p`
     margin: 0;
-    font: ${({ theme }) => theme.fonts.small20};
+    font: ${({ theme }) => theme.fonts.lead3}; 
+    color: black;
     text-align: center;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 `
 
-export default function Member({ color, name, position, icon }) {
+
+export default function Member({ color, program, name, position, icon }) {
     return (
         <ProfileContainer>
             {/* {console.log(name, icon, color)} */}
@@ -51,7 +57,7 @@ export default function Member({ color, name, position, icon }) {
                 />
             </IconContainer>
             <Name>{name}</Name>
-            {position && <Position>{position}</Position>}
+            {position && <Position>{program || 'Engineering'}</Position>}
         </ProfileContainer>
     )
 }
