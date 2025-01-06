@@ -9,3 +9,4 @@ const StyledProfileDiv = styled.div`
 export default function ProfileBackground({ color }) {
     return <StyledProfileDiv color={color}></StyledProfileDiv>
 }
+
