@@ -1,6 +1,9 @@
 import styled from 'styled-components'
 import Member from '../components/Member'
+import Lead from '../components/Lead'
 import GROUPS from '../constants/members'
+import SmallLogo from '../public/logos/SmallLogo.svg'
+import Image from 'next/image'
 
 const Title = styled.h1`
     font: ${({ theme }) => theme.fonts.heading};
@@ -12,6 +15,7 @@ const PageContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
 `
 
 const GroupContainer = styled.div`
@@ -19,7 +23,7 @@ const GroupContainer = styled.div`
 `
 
 const Subtitle = styled.h1`
-    font: ${({ theme }) => theme.fonts.medium28};
+    font: ${({ theme }) => theme.fonts.bold24};
     text-align: center;
 `
 
@@ -28,36 +32,104 @@ const MemberRow = styled.div`
     justify-content: center;
     flex-wrap: wrap;
 `
-
+const LeadRow = styled.div`
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 0 auto;
+`
+const SeparatorLine = styled.hr`
+    margin: 10px auto;
+    height: 3px;
+    background-color: ${({ theme }) => theme.colors.blue};
+    border: none;
+    width: 90vw;
+`
 const Spacer = styled.br`
     height: 100px;
 `
+const BrainManagingDirectors = styled.div`
+    position: absolute;
+    width: 6.5%;
+    height: 6.5%;
+    top: 3.7%;
+    right: 63.5%;
+    transform: scaleX(-1);
+`
+const BrainBCIGaming1 = styled.div`
+    position: absolute;
+    width: 12%;
+    height: 12%;
+    top: 20.8%;
+    right: 80%;
+`
+const BrainBCIGaming2 = styled.div`
+    position: absolute;
+    width: 16%;
+    height: 16%;
+    top: 28%;
+    left: 70%;
+`
+const BrainWheelchair = styled.div`
+    position: absolute;
+    width: 27%;
+    height: 27%;
+    top: 46.8%;
+    left: 56.2%;
+`
 
-// (just for me to see)
-// type Member = {
-//     name: String,
-//     position: String,
-//     icon: URL,
-//     lead?: boolean,
-// }
+const BrainAdvisors1 = styled.div`
+    position: absolute;
+    width: 16%;
+    height: 16%;
+    bottom: 1%;
+    right: 72%;
+`
+
+const BrainAdvisors2 = styled.div`
+    position: absolute;
+    width: 16%;
+    height: 16%;
+    bottom: -5%;
+    left: 68%;
+`
 
 export default function Members() {
     return (
-        <PageContainer>
-            <Title>MEET THE TEAM</Title>
+        <PageContainer
+        style={{textAlign: 'center', margin: 'auto'}}
+        >
+                <Title style={{ display: 'flex', alignItems: 'center', marginRight: '10px' }}>
+                    PEOPLE OF
+                    <div style={{padding: '0px 0px 0px 0px'}}><Image
+                        alt="WATOLINK logo"
+                        src={SmallLogo}
+                        layout="fixed"
+                        width={320}
+                        height={120}
+                        style={{paddingBottom: '11px'}}
+                    /></div>
+               </Title>
+
             {GROUPS.map((group) => (
+                <div>
+                <SeparatorLine></SeparatorLine>
                 <GroupContainer key={group.title}>
+
                     {group.title === 'Faculty Advisors' && <Spacer />}
                     <Subtitle>{group.title}</Subtitle>
-                    <MemberRow>
+                    <LeadRow>
                         {group.leads?.map((lead) => (
-                            <Member
+                            <Lead
                                 key={lead.name}
                                 color={group.color}
                                 {...lead}
                             />
                         ))}
-                    </MemberRow>
+                    </LeadRow>
+                    {/*<Subtitle>Team Members</Subtitle>*/}
+                    <br/>
                     <MemberRow>
                         {group.members?.map((member) => (
                             <Member
@@ -67,7 +139,50 @@ export default function Members() {
                             />
                         ))}
                     </MemberRow>
+                    <BrainManagingDirectors>
+                        <Image
+                            src={'/blue_blobs/first_blob.png'}
+                            layout="fill"
+                            objectFit="contain"
+                        />     
+                    </BrainManagingDirectors>
+                    <BrainBCIGaming1>
+                        <Image
+                            src={'/blue_blobs/members_gaming_1.png'}
+                            layout="fill"
+                            objectFit="contain"
+                        />   
+                    </BrainBCIGaming1>
+                    <BrainBCIGaming2>
+                        <Image
+                            src={'/blue_blobs/members_gaming_2.png'}
+                            layout="fill"
+                            objectFit="contain"
+                        />   
+                    </BrainBCIGaming2>
+                    <BrainWheelchair>
+                        <Image
+                            src={'/blue_blobs/members_wheelchair_1.png'}
+                            layout="fill"
+                            objectFit="contain"
+                        />   
+                    </BrainWheelchair>
+                    <BrainAdvisors1>
+                        <Image
+                            src={'/blue_blobs/members_advisors_1.png'}
+                            layout="fill"
+                            objectFit="contain"
+                        />   
+                    </BrainAdvisors1>
+                    <BrainAdvisors2>
+                        <Image
+                            src={'/blue_blobs/members_advisors_2.png'}
+                            layout="fill"
+                            objectFit="contain"
+                        />   
+                    </BrainAdvisors2>
                 </GroupContainer>
+                </div>
             ))}
         </PageContainer>
     )

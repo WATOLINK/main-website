@@ -1,30 +1,152 @@
 import Head from 'next/head'
 import styled from 'styled-components'
+import ProjectCard from '../components/ProjectCard'
+import ProjectVideoSection from '../components/ProjectVideoSection'
+import PROJECTS from '../constants/projects'
+import Image from 'next/image'
 
 const Container = styled.div`
+    position: relative;
     display: flex;
     flex-direction: column;
+    justify-content: center;
 `
 
 const Title = styled.div`
-    color: ${({ theme }) => theme.colors.blue};
+    color: ${({ theme }) => theme.colors.white};
     font: ${({ theme }) => theme.fonts.heading};
+    background-color: ${({ theme }) => theme.colors.blue};
+    opacity: 0.5;
     text-align: center;
-    padding-bottom: 50px;
+    padding: 30px;
+    margin-top: 50px;
+    outline: ${({ theme }) => theme.colors.blue};
+    box-shadow: 0px 1px 6px black;
+    margin-bottom: 50px;
 `
 
-const BodyText = styled.div`
-    color: ${({ theme }) => theme.colors.black};
-    font: ${({ theme }) => theme.fonts.medium24bold};
-    text-align: center;
-    white-space: pre;
+const ProjectCardContainer = styled.div`
+    @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 100px;
+    }
+    @media (max-width: 425px) {
+        width: 100%;
+        margin: 0 12%;
+        gap: 0%;
+    }
+    display: flex;
+    gap: 10%;
+    margin: 100px auto;
+    width: 75%;
+    max-width: 75%;
+    justify-content: center;
 `
-const BottomText = styled.div`
-    color: ${({ theme }) => theme.colors.blue};
-    font: ${({ theme }) => theme.fonts.medium24bold};
-    text-align: center;
-    margin-top: 2%;
-    margin-bottom: 2%;
+
+const BrainImage = styled.div`
+    @media (max-width: 1024px) {
+        top: 5%;
+        right: 13%;
+    }
+    @media (max-width: 768px) {
+        top: 2%;
+    }
+    @media (max-width: 425px) {
+        top: 0%;
+    }
+    position: absolute;
+    width: 88.28px;
+    height: 98.91px;
+    transform: rotate(4.05deg);
+    color: white;
+    right: 13%;
+    top: 3%;
+`
+
+const BrainImageBottom = styled.div`
+    @media (max-width: 1024px) {
+        top: 40%;
+        right: 13%;
+    }
+    @media (max-width: 1024px) {
+        right: 13%;
+        width: 50px;
+        height: 60px;
+        transform: translateY(40px) rotate(4.05deg);
+    }
+    @media (max-width: 768px) {
+        width: 30px;
+        height: 5px;
+        right: 10%;
+        transform: translateY(60px) rotate(4.05deg);
+    }
+    @media (max-width: 425px) {
+        opacity: 0;
+    }
+    position: absolute;
+    width: 88.28px;
+    height: 98.91px;
+    transform: rotate(4.05deg);
+    color: white;
+    right: 17%;
+    top: 37%;
+`
+
+const BrainImageReverse = styled.div`
+    position: relative;
+    width: 88.28px;
+    height: 98.91px;
+    bottom: 0;
+    transform: matrix(-1, 0.07, 0.07, 1, -10, -70);
+`
+
+const LoopVector = styled.div`
+    @media (max-width: 1024px) {
+        width: 150px;
+    }
+    @media (max-width: 768px) {
+        width: 100px;
+        height: 50px;
+    }
+    @media (max-width: 425px) {
+        opacity: 0;
+    }
+    position: absolute;
+    width: 380px;
+    height: 91px;
+    right: -2%;
+    transform: translateY(100px);
+`
+
+const DuckFeetTop = styled.div`
+    opacity: 60%;
+`
+
+const DuckFeetBottom = styled.div`
+    @media (max-width: 1440px) {
+        transform: translateY(140px) rotate(205.05deg);
+    }
+    @media (max-width: 1024px) {
+        transform: translateY(120px) rotate(205.05deg);
+        right: 5%;
+        width: 100px;
+    }
+    @media (max-width: 768px) {
+        width: 50px;
+        height: 10px;
+    }
+    @media (max-width: 425px) {
+        opacity: 0;
+    }
+    position: absolute;
+    right: 14%;
+    transform: translateY(120px) rotate(210.05deg);
+    opacity: 60%;
+`
+
+const GroupedContainer = styled.div`
+    position: relative;
+    display: flex;
 `
 
 export default function Projects() {
@@ -39,16 +161,75 @@ export default function Projects() {
                 />
             </Head>
             <Container>
-                <Title>PROJECTS</Title>
-                <BodyText>
-                    We are currently developing our project submission towards
-                    the NeuroTechX 2022 competition.
-                </BodyText>
-                <BodyText>
-                    Showcase will be available after competition date.
-                </BodyText>
+                <Title>CURRENT PROJECTS</Title>
+                <Container>
+                    <ProjectCardContainer>
+                        <ProjectCard
+                            project={PROJECTS.at(0)}
+                            alt={PROJECTS.at(0).name}
+                        />
+                        <ProjectCard
+                            project={PROJECTS.at(1)}
+                            alt={PROJECTS.at(1).name}
+                        />
+                        <BrainImage>
+                            <Image
+                                alt={'brain_blob'}
+                                src={'/blue_blobs/first_blob.png'}
+                                width={100}
+                                height={120}
+                            />
+                        </BrainImage>
+                    </ProjectCardContainer>
+                    <GroupedContainer>
+                        <DuckFeetTop>
+                            <Image
+                                alt={'duck_feet'}
+                                src={'/blue_blobs/duck_feet.png'}
+                                width={400}
+                                height={100}
+                            />
+                        </DuckFeetTop>
+                        <BrainImageReverse>
+                            <Image
+                                alt={'brain_blob'}
+                                src={'/blue_blobs/first_blob.png'}
+                                width={100}
+                                height={120}
+                            />
+                        </BrainImageReverse>
+                    </GroupedContainer>
+                </Container>
                 <br></br>
-                <BottomText>Stay Tuned!</BottomText>
+                <Title>Past Projects</Title>
+                <Container>
+                    <GroupedContainer>
+                        <BrainImageBottom>
+                            <Image
+                                alt={'brain_blob'}
+                                src={'/blue_blobs/first_blob.png'}
+                                width={100}
+                                height={120}
+                            />
+                        </BrainImageBottom>
+                        <LoopVector>
+                            <Image
+                                src={'/blue_blobs/loop_vector.png'}
+                                width={350}
+                                height={91}
+                            />
+                        </LoopVector>
+                        <DuckFeetBottom>
+                            <Image
+                                alt={'duck_feet'}
+                                src={'/blue_blobs/duck_feet.png'}
+                                width={160}
+                                height={50}
+                            />
+                        </DuckFeetBottom>
+                    </GroupedContainer>
+                    <ProjectVideoSection />
+                </Container>
             </Container>
         </>
     )

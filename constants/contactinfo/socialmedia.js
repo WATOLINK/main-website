@@ -7,7 +7,7 @@ const SOCIALMEDIA = [
         image: 'Instagram Logo',
         filename: Instagram,
         link: 'https://www.instagram.com/watolink_uw/',
-        custom: '5px 5px 10px 0px',
+        custom: '10px 10px 10px 0px',
     },
     {
         image: 'Twitter Logo',

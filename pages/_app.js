@@ -10,6 +10,7 @@ const App = styled.div`
     justify-content: space-between;
     height: 100vh;
     margin: 0;
+    overflow-x: hidden;
 `
 
 function MyApp({ Component, pageProps }) {
