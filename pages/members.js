@@ -113,9 +113,9 @@ export default function Members() {
                </Title>
 
             {GROUPS.map((group) => (
-                <div>
+                <div key={group.title}>
                 <SeparatorLine></SeparatorLine>
-                <GroupContainer key={group.title}>
+                <GroupContainer>
 
                     {group.title === 'Faculty Advisors' && <Spacer />}
                     <Subtitle>{group.title}</Subtitle>
@@ -144,6 +144,7 @@ export default function Members() {
                             src={'/blue_blobs/first_blob.png'}
                             layout="fill"
                             objectFit="contain"
+                            alt="blob"
                         />     
                     </BrainManagingDirectors>
                     <BrainBCIGaming1>
@@ -151,6 +152,7 @@ export default function Members() {
                             src={'/blue_blobs/members_gaming_1.png'}
                             layout="fill"
                             objectFit="contain"
+                            alt="member gaming 1"
                         />   
                     </BrainBCIGaming1>
                     <BrainBCIGaming2>
@@ -158,6 +160,7 @@ export default function Members() {
                             src={'/blue_blobs/members_gaming_2.png'}
                             layout="fill"
                             objectFit="contain"
+                            alt="member gaming 2"
                         />   
                     </BrainBCIGaming2>
                     <BrainWheelchair>
@@ -165,6 +168,7 @@ export default function Members() {
                             src={'/blue_blobs/members_wheelchair_1.png'}
                             layout="fill"
                             objectFit="contain"
+                            alt="member wheelchair 1"
                         />   
                     </BrainWheelchair>
                     <BrainAdvisors1>
@@ -172,6 +176,7 @@ export default function Members() {
                             src={'/blue_blobs/members_advisors_1.png'}
                             layout="fill"
                             objectFit="contain"
+                            alt="member advisors 1"
                         />   
                     </BrainAdvisors1>
                     <BrainAdvisors2>
@@ -179,6 +184,7 @@ export default function Members() {
                             src={'/blue_blobs/members_advisors_2.png'}
                             layout="fill"
                             objectFit="contain"
+                            alt="member advisors 1"
                         />   
                     </BrainAdvisors2>
                 </GroupContainer>
