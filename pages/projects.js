@@ -217,6 +217,7 @@ export default function Projects() {
                                 src={'/blue_blobs/loop_vector.png'}
                                 width={350}
                                 height={91}
+                                alt="loop"
                             />
                         </LoopVector>
                         <DuckFeetBottom>
