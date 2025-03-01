@@ -303,6 +303,7 @@ export default function About() {
                             src={'/main-page-images/main_page_vector.png'}
                             layout="fill"
                             objectFit="contain"
+                            alt="squiggle"
                         />
                         </LoopVector>
                 </GroupedContainer>
@@ -351,7 +352,7 @@ export default function About() {
                         </Sponsors>
                     </SponsorContainer>
                 </ContentContainer>
-                <Title1>What We've Been Doing</Title1>
+                <Title1>What We&apos;ve Been Doing</Title1>
                 <ProjectCardContainer1>
                     <ImageWrapper>
                         <Image
@@ -393,6 +394,7 @@ export default function About() {
                         src={'/main-page-images/Main_page_wheelchair_brain.png'}
                         layout="fill"
                         objectFit="contain"
+                        alt="wheelchair_brain"
                     />        
                 </BrainImageWheelchair>
                 <BrainImageGaming>
@@ -400,6 +402,7 @@ export default function About() {
                         src={'/main-page-images/Main_page_gaming_brain.png'}
                         layout="fill"
                         objectFit="contain"
+                        alt="gaming brain"
                     />    
                 </BrainImageGaming>
             </Container>
