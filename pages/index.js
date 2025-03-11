@@ -399,7 +399,7 @@ export default function About() {
                 </BrainImageWheelchair>
                 <BrainImageGaming>
                     <Image
-                        src={'/main-page-images/Main_page_gaming_brain.png'}
+                        src={'/main-page-images/main_page_gaming_brain.png'}
                         layout="fill"
                         objectFit="contain"
                         alt="gaming brain"

@@ -19,7 +19,7 @@ const ProfileContainer = styled.div`
 
 const ProfileImageContainer = styled.div`
     position: absolute;
-    transform: translate(-50%, 0%);
+    transform: translate(-50%, 5%);
     border-radius: 30%;
     overflow: hidden;
     height: 225px;
@@ -70,8 +70,8 @@ export default function Lead({ color, name, program, position, icon }) {
                 <Image
                     alt={name}
                     src={icon || DefaultProfileIcon}
-                    width={'100px'} // Adjust the size to fit the design
-                    height={'100px'} // Adjust the size to fit the design
+                    width={'80%'} // Adjust the size to fit the design
+                    height={'80%'} // Adjust the size to fit the design
                     layout="responsive"
                 />
             </ProfileImageContainer>

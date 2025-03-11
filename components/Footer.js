@@ -62,6 +62,7 @@ const StyledLink = styled.a`
     color: ${({ theme }) => theme.colors.blue};
     font: ${({ theme }) => theme.fonts.footer};
     text-align: center;
+    text-decoration: none;
     transition: color 0.3s, background-color 0.2s;
     cursor: pointer;
     display: inline-block;
@@ -105,8 +106,10 @@ export default function Footer({ page, bottomed = false }) {
                 <SocialMediaBlock />
                 <LinkContainer>
                     {NAVLINKS.map((header) => (
-                        <Link key={header.name} href={header.href}>
-                            <StyledLink>{header.name}</StyledLink>
+                        <Link key={header.name} href={header.href} passHref>
+                            <StyledLink target={header.href.includes('https') ? '_blank' : '_self'}>
+                                {header.name}
+                            </StyledLink>
                         </Link>
                     ))}
                     <FooterBrain>
@@ -120,7 +123,7 @@ export default function Footer({ page, bottomed = false }) {
                     </FooterBrain>
                 </LinkContainer>
             </TopContainer>
-            <StyledCopyright> &copy; WATOLINK 2024 </StyledCopyright>
+            <StyledCopyright> &copy; WATOLINK 2025 </StyledCopyright>
         </Container>
     )
 }

@@ -60,8 +60,10 @@ const CaptionContainer = styled.div`
 const Organizer = ({ image, filename, link, custom }) => {
     return (
         <ImageContainer title={image} custom={custom}>
-            <Link href={link}>
-                <Image alt={image} src={filename} layout="fixed" />
+            <Link href={link} passHref>
+                <a target="_blank" rel="noopener noreferrer">
+                    <Image alt={image} src={filename} layout="fixed" />
+                </a>
             </Link>
         </ImageContainer>
     );
