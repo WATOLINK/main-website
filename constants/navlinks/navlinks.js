@@ -16,7 +16,7 @@ const NAVLINKS = [
         href: '/contact',
     },
     {
-        name: 'Join our Team',
+        name: 'Join Our Team',
         href: 'https://linktr.ee/WATOLINK',
         accent: true,
     },

@@ -90,7 +90,7 @@ export default function ContactCard() {
             <br /><br />
             {CONTACTS.map((contact, index) => (
                 <LineContainer key={index}>
-                    <Text><strong>{contact.type}</strong></Text>
+                    <Text><strong>{contact.type}&nbsp;</strong></Text>
                     <Text>{contact.info}</Text>
                 </LineContainer>
             ))}
