@@ -9,7 +9,7 @@ const CONTACTS = [
     },
     {
         type: 'Team Finance Inquires:',
-        info: 'business.watolink@gmail.ca',
+        info: 'business.watolink@gmail.com',
     },
 ]
 
