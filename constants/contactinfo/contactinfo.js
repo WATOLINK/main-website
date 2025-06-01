@@ -9,7 +9,7 @@ const CONTACTS = [
     },
     {
         type: 'Team Finance Inquires:',
-        info: 'mkayrala@uwaterloo.ca',
+        info: 'business.watolink@gmail.ca',
     },
 ]
 

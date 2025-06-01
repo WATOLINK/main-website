@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import SocialMediaBlock from '../components/Common';
 import NAVLINKS from '../constants/navlinks';
+import { useRouter } from 'next/router';
 
 const Container = styled.div`
     display: flex;
@@ -99,6 +100,8 @@ const StyledCopyright = styled.div`
 `;
 
 export default function Footer({ page, bottomed = false }) {
+    const router = useRouter();
+
     return (
         <Container>
             <BlueOverlay /> 
@@ -106,11 +109,21 @@ export default function Footer({ page, bottomed = false }) {
                 <SocialMediaBlock />
                 <LinkContainer>
                     {NAVLINKS.map((header) => (
-                        <Link key={header.name} href={header.href} passHref>
-                            <StyledLink target={header.href.includes('https') ? '_blank' : '_self'}>
+                         header.href.includes('https') ? (
+                            <StyledLink
+                                as="a"
+                                key={header.name}
+                                href={header.href}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
                                 {header.name}
                             </StyledLink>
-                        </Link>
+                        ) : (
+                            <Link key={header.name} href={header.href} passHref legacyBehavior>
+                                <StyledLink as="a">{header.name}</StyledLink>
+                            </Link>
+                        )
                     ))}
                     <FooterBrain>
                         <Image
