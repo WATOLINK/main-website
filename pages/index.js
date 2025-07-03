@@ -311,7 +311,7 @@ export default function About() {
                 <ContentContainer>
                     <Container1>
                         <InfoContainer>
-                            <Info heading="30+" subheading="Members">
+                            <Info heading="20+" subheading="Members">
                                 Future projects may involve developing our own
                                 sensor technology and BCI hardware. The efforts of
                                 this team could eventually go towards graduate
