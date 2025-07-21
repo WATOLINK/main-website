@@ -42,11 +42,10 @@ const MainContent = styled.div`
 
 const Section = styled.div`
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-shrink: 0;
     padding: 26px 0px
     align-items: center;
-    gap: 228px;
     margin-bottom: 80px;
 
     @media (max-width: 768px) {
@@ -185,8 +184,8 @@ const BrainOverlayTwo = styled.img`
 
 const TextSection = styled.div`
     flex: 1;
-    min-width: 300px;
-    max-width: 500px;
+    min-width: 500px;
+    max-width: 700px;
     display: flex;
     flex-direction: column;
     text-align: right;
@@ -226,14 +225,33 @@ const SecondSectionText = styled(TextSection)`
     }
 `;
 
+const FirstSectionImage = styled.div`
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    margin-left: 20px;
+    text-align: left;
+
+    @media (max-width: 768px) {
+        margin: 0;
+        justify-content: center;
+    }
+`;
+
+
+
 const SecondSectionImage = styled.div`
     position: relative;
     width: 100%;
     display: flex;
-    justify-content: center;
-    
+    justify-content: right;
+    margin-right: 20px;
+
     @media (max-width: 768px) {
         order: 1; /* Display image first on mobile */
+        margin: 0;
+        justify-content: center;
     }
 `;
 
@@ -290,7 +308,7 @@ export default function JoinPage() {
             <PageWrapper>
                 <MainContent>
                     <FadeSection>
-                        <div style={{ position: 'relative', width: '100%', display: 'flex', justifyContent: 'center' }}>
+                        <FirstSectionImage>
                             <ImageBox>
                                 <Image
                                     src={TeamPhoto}
@@ -302,7 +320,7 @@ export default function JoinPage() {
                                     alt="Brain Overlay"
                                 />
                             </ImageBox>
-                        </div>
+                        </FirstSectionImage>
                         <TextSection>
                             <Heading>Why Join?</Heading>
                             <p>
@@ -320,13 +338,9 @@ export default function JoinPage() {
                         <SecondSectionText>
                             <Heading>How To Join</Heading>
                             <p>
-                                We are currently accepting applications for the following roles:
+                                We’re not currently hiring for any roles, but we’re always excited to connect with potential team members. 
+                                If you’re interested in future opportunities, feel free to reach out at <a href="mailto:business.watolink@gmail.com">business.watolink@gmail.com</a>.
                             </p>
-                            <ul>
-                                <Bullet>Operations: UX/UI, Frontend Developers</Bullet>
-                                <Bullet>Mechanical Designers</Bullet>
-                            </ul>
-                            <p>Check back soon for more position openings!</p>
                             <JoinButton href="#">Apply Now!</JoinButton>
                         </SecondSectionText>
                         <SecondSectionImage>
