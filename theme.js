@@ -18,11 +18,6 @@ const fonts = {
     subheading: `normal 600 30px 'Poppins', sans-serif`,
     heading: `normal 600 45px 'Poppins', sans-serif`,
     largeheading: `normal 700 72px 'Poppins', sans-serif`,
-
-    heading45: `bold 45px/100% 'Orbitron', sans-serif`,
-    description24: `bold 24px/100% 'Quantico', italic`,
-    apply: `normal 600 28px/100% 'Quantico', sans-serif`,
-    subheading32: `bold 32px/100% 'Orbitron', sans-serif`,
 }
 
 const colors = {
@@ -37,14 +32,9 @@ const colors = {
     greyblue: '#B6C2E0',
     pink: '#FBE1E0',
     grey: '#949494',
-    lightblue2: '#88C7FF',
 }
 
 export const theme = {
     colors,
     fonts,
 }
-
-
-
-
