@@ -22,5 +22,5 @@ const SOCIALMEDIA = [
         custom: '10px 10px 10px 10px',
     },
 ]
-
+ 
 export default SOCIALMEDIA
