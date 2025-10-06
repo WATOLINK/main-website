@@ -1,5 +1,9 @@
 const NAVLINKS = [
     {
+        name: '2025 Conference',
+        href: '/conference',
+    },
+    {
         name: 'About Us',
         href: '/',
     },
