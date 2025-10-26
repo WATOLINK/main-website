@@ -21,7 +21,8 @@ const Card = styled.div`
 
 const Title = styled.div`
     color: ${({ theme }) => theme.colors.blue};
-    font: ${({ theme }) => theme.fonts.heading};
+    font-family: var(--font-heading);
+    font-weight: 700;
     font-size: 55px;
     display: flex;
     padding-bottom: 10px;
@@ -50,7 +51,7 @@ const LineContainer = styled.div`
 `;
 
 const Text = styled.span`
-    font-family: 'Roboto', sans-serif;
+    font-family: var(--font-body);
     color: ${({ theme }) => theme.colors.text || '#333'};
 `;
 
