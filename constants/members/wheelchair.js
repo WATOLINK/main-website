@@ -2,6 +2,7 @@ import Owen from '../../public/members/wheelchair/Owen.svg'
 import Maggie from '../../public/members/wheelchair/Maggie.svg'
 import Pranav from '../../public/members/wheelchair/Pranav.svg'
 
+// Currently Unused
 const wheelchair = [
     {
         position: 'Lead',
