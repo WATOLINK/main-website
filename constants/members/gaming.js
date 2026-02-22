@@ -1,12 +1,13 @@
 import Yaxin from '../../public/members/gaming/Yaxin.svg'
 import Alexis from '../../public/members/gaming/Alexis.svg'
+import Peter from '../../public/members/gaming/Peter.png'
 
 const GAMING = [
     {
         position: 'Lead',
         program: 'Biomedical Engineering',
-        name: 'ALEXIS BADER',
-        icon: Alexis,
+        name: 'PETER ALPAJARO',
+        icon: Peter,
         lead: true,
     },
     {
@@ -33,11 +34,6 @@ const GAMING = [
         position: 'Core Member',
         name: 'Kevin Ge',
         program: 'Software Engineering',
-    },
-    {
-        position: 'Core Member',
-        name: 'Peter Alpajaro',
-        program: 'Biomedical Engineering',
     },
     {
         position: 'Core Member',
