@@ -1,21 +1,13 @@
-import Livia from '../../public/members/directors/Livia.svg'
-import Mackenzie from '../../public/members/directors/Mackenzie.svg'
+import Varsha from '../../public/members/directors/Varsha.png'
 
 const OPERATIONS = [
     {
-        name: 'LIVIA MURRAY',
+        name: 'VARSHA BANDI',
         position: 'Admin',
         program: 'Biomedical Engineering',
-        icon: Livia,
+        icon: Varsha,
         lead: true,
     },
-    {
-        name: 'MACKENZIE SNYDER',
-        position: 'Admin',
-        program: 'Biomedical Engineering',
-        icon: Mackenzie,
-        lead: true,
-    }
 ]
 
 export default OPERATIONS
