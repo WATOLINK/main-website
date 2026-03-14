@@ -1,5 +1,9 @@
 const NAVLINKS = [
     {
+        name: 'Milestones',
+        href: '/milestones',
+    },
+    {
         name: 'About Us',
         href: '/',
     },
