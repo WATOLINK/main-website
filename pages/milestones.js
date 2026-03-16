@@ -166,7 +166,7 @@ const MilestoneTitle = styled.h3`
 const MilestoneDescription = styled.p`
     text-align: center;
     color: ${({ theme }) => theme.colors.grey};
-    font: 500 15px 'Inter', sans-serif;
+    font: 500 16px 'Quantico', sans-serif;
     margin: 0;
     line-height: 1.5;
 `
