@@ -61,7 +61,7 @@ const BrainBCIGaming1 = styled.div`
     position: absolute;
     width: 12%;
     height: 12%;
-    top: 20.8%;
+    top: 15%;
     right: 80%;
 `
 const BrainBCIGaming2 = styled.div`
